@@ -5,10 +5,20 @@
  *      Author: muhammad.ahmad@georgekent.net
  */
 
-#include "common.h"
+//#include "common.h"
+#include "main.h"
+#include "rtc.h"
+#include "wwdg.h"
+#include "bus.h"
+#include "crc.h"
+
+#include "sys.h"
+#include "failsafe.h"
+
 #include "cfg.h"
 #include "cfg_keys.h"
-#include "dbg.h"
+#include "cfg_addr.h"
+#include "cfg_device.h"
 
 //#define DBG_PrintLine(...)
 //#define DBG_Print(...)
@@ -17,7 +27,7 @@ static uint16_t 	CFG_GetConfigVersion(uint32_t _eepromAddress);
 static void 		CFG_ReadStruct(Config_t *_cfg, uint32_t _eepromAddress);
 static ErrorStatus 	CFG_WriteStruct(uint8_t *_struct, uint16_t _length, uint32_t _address);
 
-Config_t config;
+//Config_t config;
 
 void CFG_ApplyDefaults(Config_t *_cfg)
 {
@@ -102,7 +112,7 @@ void CFG_ApplyDefaults(Config_t *_cfg)
 		_cfg->failsafe.failsafeWordB= FAILSAVE_CFG_WORD_B;
 		_cfg->failsafe.SWDGTimeout_ms= 25000,//25000,/*IWDG will force reset maximum at about 32sec, SWDG must timeout before that so that we can save config *;
 		_cfg->failsafe.IWDGEnable= true;
-		_cfg->failsafe.IWDGPrescaler= LL_IWDG_PRESCALER_256;
+		_cfg->failsafe.IWDGPrescaler= LL_WWDG_PRESCALER_8;
 		_cfg->failsafe.IWDGReloadCounter= 0x0FFF;
 		_cfg->failsafe.WWDGEnable= false;
 		_cfg->failsafe.WWDGPrescaler= LL_WWDG_PRESCALER_8;

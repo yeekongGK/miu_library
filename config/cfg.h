@@ -16,9 +16,10 @@
 #include "nbiot.h"
 #include "bc66link.h"
 #include "sensor.h"
-#include "alarm.h"
+#include "alarm_cfg.h"
 #include "failsafe.h"
 #include "diag.h"
+#include <time.h>
 
 #define CFG_CONFIG_VERSION 				0x0032/*Please increment this when modifying config*/
 #define CFG_MIN_CONFIG_VERSION			0x0012 /*minimum config version that can be forward-compatible*/
@@ -170,5 +171,6 @@ ErrorStatus CFG_Store(Config_t *_cfg);
 ErrorStatus CFG_Load(Config_t *_cfg);
 ErrorStatus CFG_LoadSystem(Config_t *_cfg);
 void CFG_TLVRequest(TLV_t *_tlv);
+void CFG_ApplyDefaults(Config_t *_cfg);
 
 #endif /* INC_CONFIGURATION_H_ */

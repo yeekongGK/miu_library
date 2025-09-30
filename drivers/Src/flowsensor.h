@@ -9,6 +9,7 @@
 #define SENSOR_FLOWSENSOR_H_
 
 #include "main.h"
+#include "pulser.h"
 
 typedef enum
 {
