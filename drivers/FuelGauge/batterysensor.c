@@ -144,8 +144,8 @@ static void BATTSENSOR_LWInit(void)
 	/*exit hibernate mode sequence*/
 	// To wake and exit hibernate:
 	// 	1. Write HibCfg = 0x0000.
-	// 	2. Soft-Wakeup Command. Write Command Register (60h) to 0x0090.
-	// 	3. Clear Command. Write Command Register (60h) to 0x0000.
+	// 	2. Soft-Wakeup Command. Write Command Register (SOFT_WAKEUP) to 0x0090.
+	// 	3. Clear Command. Write Command Register (SOFT_WAKEUP) to 0x0000.
 	// 	4. Eventually restore HibCfg to again allow automatic hibernate decisions.
 	MAX17260_Register_WriteSingle(HIB_CFG, 0x00);		// `0x00` → Clear hibernate configuration, ensures device is in **active mode**.
 	MAX17260_Register_WriteSingle(SOFT_WAKEUP, 0x90);	// `0x90` → Forces the gauge out of hibernate temporarily.
