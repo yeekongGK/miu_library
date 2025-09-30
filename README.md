@@ -1,4 +1,4 @@
-# MIU Lirary 
+# MIU Library 
 
 ```
 Projects Folder Structure
@@ -34,23 +34,29 @@ Projects Folder Structure
 ```
 miu_library Folder Structure
 ├───bootloaders
+├───config
+├───diagnosis
 ├───documents
 ├───drivers
 │   ├───BC660K
 │   ├───ENV
 │   ├───ESP32
 │   ├───ESP8266
+│   ├───FuelGauge
+│   │   └───Examples
 │   ├───GK_TRACSENS
 │   ├───M95M_EEPROM
-│   ├───MAX17260_FuelGauge
 │   ├───MEMS
 │   │   └───LIS2DH12
 │   ├───Pulser
 │   ├───SIM7000E
+│   ├───Src
 │   ├───ST25_NFC
+│   │   └───Src
 │   └───UBlox_LEXI_R10801D
 ├───examples
 ├───failsafe
+├───logger
 ├───network
 │   ├───COAP
 │   ├───GK_HES
@@ -58,6 +64,12 @@ miu_library Folder Structure
 │   ├───LWIP
 │   ├───LWM2M
 │   ├───NB_IoT
+│   │   ├───BC66
+│   │   ├───GKCOAP
+│   │   └───LWM2M
+│   │       ├───cbor
+│   │       │   └───src
+│   │       └───objects
 │   └───OpenStack
 ├───projects
 │   ├───AURA
@@ -76,7 +88,9 @@ miu_library Folder Structure
 │       └───SYSTEM
 ├───Scripts
 ├───security
+├───Src
 ├───storage
+├───system
 └───Tools
 ```
 
