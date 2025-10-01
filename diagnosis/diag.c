@@ -5,7 +5,9 @@
  *      Author: muhammad.ahmad@georgekent.net
  */
 
-#include "common.h"
+//#include "common.h"
+#include "main.h"
+#include "sys.h"
 #include "diag.h"
 
 static DIAG_t *pConfig;

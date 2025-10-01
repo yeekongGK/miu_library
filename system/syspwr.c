@@ -5,7 +5,7 @@
  *      Author: muhammad.ahmad@georgekent.net
  */
 
-#include "common.h"
+#include "main.h"
 #include "syspwr.h"
 #include "ioctrl.h"
 #include "digitalsensor.h"

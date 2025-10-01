@@ -180,6 +180,11 @@ static void BATTSENSOR_LWInit(void)
 	}while(0x00!= _value);		// 0 → means model reload sequence completed.
 
 	/*Re-enable Hibernate after Model Load*/
+	// 0x870C
+	// Hibernate Entry Time : 0.000 – 2.812 seconds
+	// Hibernate Threshold  : 3750.00 mA (FullCap=2000 mAh)
+	// Task Period in Hibernate: 5.616 seconds
+	// Hibernate Exit Time  : 786.2 seconds (13.1 minutes)
 	MAX17260_Register_WriteSingle(HIB_CFG, 0x870C);	// `0x870C`	Restores hibernate configuration (automatic entry/exit conditions enabled).
 
 	/*Status Reset*/
@@ -200,9 +205,19 @@ static void BATTSENSOR_LWInit(void)
 
 	/*Final Configuration Values*/
 	MAX17260_Register_WriteSingle(DESIGN_CAP, 0x7FF8);	//– Set actual design capacity (~32760 mAh if LSB=0.5mAh)
+	
+	// I_CHG_TERM 
+	// 0x1900 = 6400 (decimal)
+	// LSB = 1.5625e-6 / 0.1 = 0.0015625 A = 15.625 µA
+	// IChgTerm = 6400 × 15.625 µA
+    //       ≈ 0.1 A (charge termination current threshold.)
 	MAX17260_Register_WriteSingle(I_CHG_TERM, 0x1900);	// 0x1900 → sets charge termination current (depends on Rsense).
+
+	// V_EMPTY: 0x783F = 0111 1000 0011 1111b
+	// VE (Empty Voltage Target): 2.400 V
+  	// VR (Recovery Voltage)    : 2.520 V
 	MAX17260_Register_WriteSingle(V_EMPTY, 0x783F);		// → new **empty voltage thresholds**.
-	MAX17260_Register_WriteSingle(LEARN_CFG, 0x44F6);	// = controls **learning algorithm** (adaptation stages, SOC learning).
+	MAX17260_Register_WriteSingle(LEARN_CFG, 0x44F6);	// = 0x44F6 = Coulomb counter dominates, 0x4486 = Voltage model dominates
 	MAX17260_Register_WriteSingle(FILTER_CFG, 0xCEA4);	// = configures averaging filters for voltage, current, SOC, temp.
 	MAX17260_Register_WriteSingle(C_OFF, 0xFFFF);		// = Current offset calibration. `0xFFFF` means adjust calibration baseline.
 	MAX17260_Register_WriteSingle(C_GAIN, 0x0400);		// = Current gain calibration. Default 0x0400 = unity gain.

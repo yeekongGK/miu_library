@@ -5,11 +5,13 @@
  *      Author: muhammad.ahmad@georgekent.net
  */
 
-#include "common.h"
+//#include "common.h"
+#include "main.h"
+#include "cfg.h"
+
 #include "sys.h"
 #include "lptim2.h"
 #include "sensor.h"
-#include "alarm.h"
 #include "logger.h"
 #include "nfctag.h"
 #include "pulser.h"
@@ -20,6 +22,7 @@
 #include "failsafe.h"
 #include "ioctrl.h"
 #include "security.h"
+#include "../alarm/alarm.h"
 
 SYS_TaskInfo_t pSYS_TaskInfo[MAX_TaskId];
 bool bKeepSleep= true;

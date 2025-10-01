@@ -3,15 +3,25 @@
  *
  *  Created on: 23 May 2018
  *      Author: muhammad.ahmad@georgekent.net
+ *
+ *
+ *      PIC: CYK
+ *      TODO:
+ *      * replace ioctrl
+ *      * replace NFCTAG_GPOInit
  */
 
-#include "common.h"
+//#include "common.h"
+#include "main.h"
 #include "nfctag.h"
 #include "nfctag_ndef.h"
 #include "rtc.h"
-#include "ioctrl.h"
+//#include "ioctrl.h"
 #include "msg.h"
 #include "security.h"
+#include "diag.h"
+#include "sys.h"
+#include "utili.h"
 
 #define DBG_Print(...)
 
@@ -165,55 +175,55 @@ NFCTAG_Init_Retry:
 
 void NFCTAG_GPOInit( void )
 {
-	LL_EXTI_InitTypeDef EXTI_InitStruct;
-
-	SYS_EnablePortClock(NFC_BUSY_GPIO_Port);
-
-	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
-	LL_SYSCFG_SetEXTISource(NFC_BUSY_SYSCFG_EXTI_Port, NFC_BUSY_SYSCFG_EXTI_Line);
-
-	LL_GPIO_SetPinPull(NFC_BUSY_GPIO_Port, NFC_BUSY_Pin, LL_GPIO_PULL_NO);
-	LL_GPIO_SetPinMode(NFC_BUSY_GPIO_Port, NFC_BUSY_Pin, LL_GPIO_MODE_INPUT);
-
-	EXTI_InitStruct.Line_0_31= NFC_BUSY_EXTI_Line;
-	EXTI_InitStruct.LineCommand= ENABLE;
-	EXTI_InitStruct.Mode= LL_EXTI_MODE_IT;
-	EXTI_InitStruct.Trigger= LL_EXTI_TRIGGER_FALLING;
-	LL_EXTI_Init(&EXTI_InitStruct);
-
-	NVIC_SetPriority(NFC_BUSY_EXTI_IRQn, SYS_CFG_EXTI_PRIORITY);
-	NVIC_EnableIRQ(NFC_BUSY_EXTI_IRQn);
+//	LL_EXTI_InitTypeDef EXTI_InitStruct;
+//
+//	SYS_EnablePortClock(NFC_BUSY_GPIO_Port);
+//
+//	LL_APB2_GRP1_EnableClock(LL_APB2_GRP1_PERIPH_SYSCFG);
+//	LL_SYSCFG_SetEXTISource(NFC_BUSY_SYSCFG_EXTI_Port, NFC_BUSY_SYSCFG_EXTI_Line);
+//
+//	LL_GPIO_SetPinPull(NFC_BUSY_GPIO_Port, NFC_BUSY_Pin, LL_GPIO_PULL_NO);
+//	LL_GPIO_SetPinMode(NFC_BUSY_GPIO_Port, NFC_BUSY_Pin, LL_GPIO_MODE_INPUT);
+//
+//	EXTI_InitStruct.Line_0_31= NFC_BUSY_EXTI_Line;
+//	EXTI_InitStruct.LineCommand= ENABLE;
+//	EXTI_InitStruct.Mode= LL_EXTI_MODE_IT;
+//	EXTI_InitStruct.Trigger= LL_EXTI_TRIGGER_FALLING;
+//	LL_EXTI_Init(&EXTI_InitStruct);
+//
+//	NVIC_SetPriority(NFC_BUSY_EXTI_IRQn, SYS_CFG_EXTI_PRIORITY);
+//	NVIC_EnableIRQ(NFC_BUSY_EXTI_IRQn);
 }
 
 void NFCTAG_PowerPinInit(void)
 {
-	IOCTRL_NFCPower_Init(false);/*reset by default*/
+//	IOCTRL_NFCPower_Init(false);/*reset by default*/
 }
 
 void NFCTAG_PowerPinSet(uint8_t _state)
 {
-	if(0== _state)
-	{
-		IOCTRL_NFCPower_Enable(false);
-	}
-	else
-	{
-		IOCTRL_NFCPower_Enable(true);
-		UTILI_usDelay(600);/*booting time*/
-		//HAL_Delay(10);/*booting time*/
-	}
+//	if(0== _state)
+//	{
+//		IOCTRL_NFCPower_Enable(false);
+//	}
+//	else
+//	{
+//		IOCTRL_NFCPower_Enable(true);
+//		UTILI_usDelay(600);/*booting time*/
+//		//HAL_Delay(10);/*booting time*/
+//	}
 }
 
 uint8_t NFCTAG_PowerPinGet(void)
 {
-	if(true== IOCTRL_NFCPower_IsEnable())
-	{
-		return 1;
-	}
-	else
-	{
-		return 0;
-	}
+//	if(true== IOCTRL_NFCPower_IsEnable())
+//	{
+//		return 1;
+//	}
+//	else
+//	{
+//		return 0;
+//	}
 }
 
 ErrorStatus NFCTAG_GetGPOStatus(NFC_GPOStatus_t* _gpoStatus)

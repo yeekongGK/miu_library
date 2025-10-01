@@ -4,7 +4,7 @@
  *  Created on: 20 May 2018
  *      Author: muhammad.ahmad@georgekent.net
  */
-#include <i2c1.h>
+#include <i2c.h>
 #include "st25dv.h"
 #include "st25dv_io.h"
 
@@ -36,10 +36,11 @@ NFCTAG_Status_t ST25DV_IO_Init( void )
 		_isInitialized= false;
 	}
 
-	if(HAL_OK!= I2C1_Init())
-	{
-		return NFCTAG_ERROR;
-	}
+	MX_I2C1_Init();
+//	if(HAL_OK!= MX_I2C1_Init())
+//	{
+//		return NFCTAG_ERROR;
+//	}
 
 	_isInitialized= true;
 	return NFCTAG_OK;

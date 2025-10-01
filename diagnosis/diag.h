@@ -10,6 +10,7 @@
 
 #include "main.h"
 #include "sensor.h"
+#include "queue.h"
 
 #define DIAG_CFG_VERSION					0x01
 #define DIAG_CFG_ENTRY_SIZE					(10)
