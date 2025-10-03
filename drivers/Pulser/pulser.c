@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        pulser.c
- * Author:      CYK
- * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Author:      Firmware Team
+ * Created:     03-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file provides a generic interface for various pulser sensor types.

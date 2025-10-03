@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        max1726x.c
- * Author:      CYK
- * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Author:      Firmware Team
+ * Created:     03-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file provides the driver implementation for the MAX1726x series of

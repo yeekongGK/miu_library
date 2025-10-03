@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        max1726x.c
- * Author:      CYK
- * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Author:      Firmware Team
+ * Created:     03-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file contains example code demonstrating the usage of the MAX1726x

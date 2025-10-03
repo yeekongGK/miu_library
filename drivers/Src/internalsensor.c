@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        internalsensor.c
- * Author:      CYK
- * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Author:      Firmware Team
+ * Created:     03-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file implements the driver for the microcontroller's internal sensors,

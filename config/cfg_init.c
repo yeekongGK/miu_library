@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        cfg_init.c
- * Author:      CYK
- * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Author:      Firmware Team
+ * Created:     03-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file initializes the global configuration structure (`config`) with
