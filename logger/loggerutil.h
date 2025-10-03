@@ -1,9 +1,21 @@
-/*
- * loggerutil.h
+/******************************************************************************
+ * File:        loggerutil.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 8 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the logger utility functions.
+ *   It provides function prototypes for time-based calculations, log start
+ *   time configuration, and device status change detection.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef LOGGER_LOGGERUTIL_H_
 #define LOGGER_LOGGERUTIL_H_

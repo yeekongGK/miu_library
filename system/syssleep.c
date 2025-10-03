@@ -1,9 +1,24 @@
-/*
- * rtcwkup.c
+/******************************************************************************
+ * File:        syssleep.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 2 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the system's sleep management functionality. It uses
+ *   the RTC wakeup timer to schedule sleep periods and manages sleep requests
+ *   from various tasks. The goal is to put the MCU into low-power (STOP)
+ *   modes when no tasks are active, thus conserving energy. It dynamically
+ *   calculates the required sleep duration based on the next pending task.
+ *
+ * Notes:
+ *   - It provides functions to enter light sleep (STOP0) and deep sleep (STOP2)
+ *     modes.
+ *
+ * To Do:
+ *   - The logic for calculating the minimum sleep period could be simplified.
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "syssleep.h"

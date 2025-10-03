@@ -1,45 +1,28 @@
-/*******************************************************************************
- * Copyright (C) 2016 Maxim Integrated Products, Inc., All Rights Reserved.
+/******************************************************************************
+ * File:        max1726x.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- * Permission is hereby granted, free of charge, to any person obtaining a
- * copy of this software and associated documentation files (the "Software"),
- * to deal in the Software without restriction, including without limitation
- * the rights to use, copy, modify, merge, publish, distribute, sublicense,
- * and/or sell copies of the Software, and to permit persons to whom the
- * Software is furnished to do so, subject to the following conditions:
+ * Description:
+ *   This file provides the driver implementation for the MAX1726x series of
+ *   fuel gauge ICs. It includes functions for low-level I2C communication,
+ *   register read/write operations, and initialization routines. The driver
+ *   supports multiple configuration methods, including EZ Config, short INI,
+ *   and full INI, allowing for flexible battery model setup. It also provides
+ *   functionality to save and restore learned battery parameters.
  *
- * The above copyright notice and this permission notice shall be included
- * in all copies or substantial portions of the Software.
+ * Notes:
+ *   - This driver appears to be based on a reference implementation from
+ *     Maxim Integrated.
+ *   - It relies on a platform-specific I2C implementation, which is
+ *     abstracted through `I2C1_MemWrite` and `I2C1_MemRead`.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
- * OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
- * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
- * IN NO EVENT SHALL MAXIM INTEGRATED BE LIABLE FOR ANY CLAIM, DAMAGES
- * OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
- * ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
- * OTHER DEALINGS IN THE SOFTWARE.
- *
- * Except as contained in this notice, the name of Maxim Integrated
- * Products, Inc. shall not be used except as stated in the Maxim Integrated
- * Products, Inc. Branding Policy.
- *
- * The mere transfer of this software does not imply any licenses
- * of trade secrets, proprietary technology, copyrights, patents,
- * trademarks, maskwork rights, or any other form of intellectual
- * property whatsoever. Maxim Integrated Products, Inc. retains all
- * ownership rights.
- *
- * $Date: 2019-10-18 09:19:34 -0500 (18 Oct 2019) $
- * $Revision: 1.0 $
+ * To Do:
+ *   - The initialization functions contain hardcoded battery parameters that
+ *     should be made configurable.
  *
  ******************************************************************************/
-
- /**
- * @file    max1726x.c
- * @brief   max1726x driver.
- *
- */
-
 
 /**** Includes ****/
 #include "max1726x.h"

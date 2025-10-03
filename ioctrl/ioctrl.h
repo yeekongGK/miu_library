@@ -1,9 +1,23 @@
-/*
- * ioctrl.h
+/******************************************************************************
+ * File:        ioctrl.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 15 Dec 2018
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the I/O control module. It
+ *   provides function prototypes for initializing and controlling various
+ *   hardware power signals and control lines, such as main power, NFC power,
+ *   radio power, and Secure Element (SE) controls. It also includes functions
+ *   for SIM card detection.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SRC_IOCTRL_IOCTRL_H_
 #define SRC_IOCTRL_IOCTRL_H_

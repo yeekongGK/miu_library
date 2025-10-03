@@ -1,9 +1,25 @@
-/*
- * pulsecntr.c
+/******************************************************************************
+ * File:        pulser.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: muhammad.ahamd@georgekent.net
- */
+ * Description:
+ *   This file provides a generic interface for various pulser sensor types.
+ *   It acts as an abstraction layer that delegates function calls to the
+ *   specific driver (e.g., TRACSENS, LCSENS, ELSTER) based on the current
+ *   operating mode. It manages pulser configuration, value retrieval, TLV
+ *   requests, and saving/restoring state from RTC backup registers.
+ *
+ * Notes:
+ *   - Function pointers are used to switch between different pulser
+ *     implementations at runtime.
+ *
+ * To Do:
+ *   - The LCSENS mode is currently commented out and needs to be fully
+ *     implemented or removed.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "pulser.h"

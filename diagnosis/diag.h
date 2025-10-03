@@ -1,9 +1,24 @@
-/*
- * diagnostic.h
+/******************************************************************************
+ * File:        diag.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 27 Mar 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the interface for the diagnostic system. It includes
+ *   definitions for diagnostic codes (DIAG_DCode_t), which are used to log
+ *   various system events and errors. It also defines the structure DIAG_t
+ *   for storing diagnostic configuration and runtime data, and declares
+ *   functions for initializing the module, logging codes, and handling TLV
+ *   requests.
+ *
+ * Notes:
+ *   - Diagnostic codes are organized by task ID.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef DIAG_H_
 #define DIAG_H_

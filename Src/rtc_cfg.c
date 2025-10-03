@@ -1,9 +1,25 @@
-/*
- * rtc.c
+/******************************************************************************
+ * File:        rtc_cfg.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 16 Dec 2020
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file provides the configuration and management functions for the
+ *   Real-Time Clock (RTC) peripheral. It handles initialization of the RTC,
+ *   setting the time and date, and retrieving the current time in various
+ *   formats, including milliseconds and a `time_t` timestamp. It also
+ *   includes logic to synchronize with the RTC hardware and handle initial
+ *   setup if the RTC has not been previously configured.
+ *
+ * Notes:
+ *   - Overrides the standard `time()` function to use the hardware RTC.
+ *   - Uses RTC backup registers to maintain synchronization state.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "rtc.h"

@@ -1,9 +1,24 @@
-/*
- * clcokmgt.c
+/******************************************************************************
+ * File:        sysclk.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 5 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the system clock configuration and management
+ *   functions. It is responsible for initializing the main system clock
+ *   (SYSCLK) based on different sources like MSI or HSI, and configuring
+ *   PLL settings for desired frequencies. It also provides functions for
+ *   managing the system tick and retrieving timestamps.
+ *
+ * Notes:
+ *   - Overrides the weak `HAL_IncTick` and `HAL_GetTick` functions to use a
+ *     64-bit system tick counter.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "sysclk.h"

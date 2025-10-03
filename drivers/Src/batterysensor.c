@@ -1,9 +1,27 @@
-/*
- * batterysensor.c
+/******************************************************************************
+ * File:        batterysensor.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 19 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for the battery sensor, which is based on
+ *   the MAX17260 fuel gauge IC. It provides an interface to initialize the
+ *   sensor, read various battery metrics such as state of charge (SOC),
+ *   voltage, current, and temperature, and handle operational states like
+ *   hibernate mode. It also includes logic for managing the coulomb counter
+ *   and logging diagnostic data.
+ *
+ * Notes:
+ *   - This driver interacts directly with the MAX17260 hardware driver.
+ *   - It relies on RTC backup registers to maintain state, such as the
+ *     coulomb counter overflow multiplier, across device resets.
+ *
+ * To Do:
+ *   - The initialization sequence `BATTSENSOR_LWInit` contains many magic
+ *     numbers that could be defined as named constants for clarity.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "batterysensor.h"

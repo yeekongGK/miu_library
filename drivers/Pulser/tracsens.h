@@ -1,9 +1,23 @@
-/*
- * tracsens.h
+/******************************************************************************
+ * File:        tracsens.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the TRACSENS pulser driver. It
+ *   includes the configuration structure `TRACSENS_t`, enumerations for error
+ *   states, and function prototypes for initializing the driver, controlling
+ *   the counting process, and retrieving pulse data, direction, and error
+ *   status.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef PULSECNTR_TRACSENS_H_
 #define PULSECNTR_TRACSENS_H_

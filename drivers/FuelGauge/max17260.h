@@ -1,3 +1,24 @@
+/******************************************************************************
+ * File:        max17260.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file defines the public interface for the MAX17260 fuel gauge
+ *   driver. It includes an enumeration of all accessible registers
+ *   (`MAX17260_Reg_t`) with descriptions of their functions. It also provides
+ *   function prototypes for initializing the device and retrieving key battery
+ *   data, such as the raw coulomb counter value.
+ *
+ * Notes:
+ *   - This header is intended for use by higher-level application modules
+ *     that need to interact with the battery monitor.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 #ifndef BATTERY_MONITOR_H
 #define BATTERY_MONITOR_H
 

@@ -1,9 +1,25 @@
-/*
- * sensor.c
+/******************************************************************************
+ * File:        sensor.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 18 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the main sensor management module. It acts as a
+ *   facade, aggregating data and functionality from various underlying sensor
+ *   drivers (internal, position, digital, battery, flow). It provides a
+ *   unified interface for initializing sensors, retrieving values, managing
+ *   status flags, and handling TLV-based communication for sensor data.
+ *
+ * Notes:
+ *   - This module coordinates multiple sensor drivers to provide a consolidated
+ *     view of the system's state.
+ *
+ * To Do:
+ *   - The SENSOR_GetFlag function contains debug print statements that should
+ *     be removed in a production build.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "sensor.h"

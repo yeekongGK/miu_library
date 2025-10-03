@@ -1,9 +1,21 @@
-/*
- * cfg_device.h
+/******************************************************************************
+ * File:        cfg_device.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 28 Dec 2020
- *      Author: muhammad.ahamad@georgekent.net
- */
+ * Description:
+ *   This file contains device-specific definitions, including the firmware and
+ *   hardware version strings. These macros are used throughout the application
+ *   to identify the current build and hardware revision.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef INC_CFG_DEVICE_H_
 #define INC_CFG_DEVICE_H_

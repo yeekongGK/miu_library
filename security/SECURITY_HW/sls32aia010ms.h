@@ -1,9 +1,23 @@
-/*
- * sls32aia010ms.h
+/******************************************************************************
+ * File:        sls32aia010ms.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 19 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface and configuration constants for the
+ *   SLS32AIA010MS hardware security element driver. It includes definitions
+ *   for the I2C address, communication timeout, and timing parameters for
+ *   reset and startup sequences. It also declares the initialization function
+ *   for the driver.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SECURITY_SLS32AIA010MS_H_
 #define SECURITY_SLS32AIA010MS_H_

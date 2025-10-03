@@ -1,9 +1,23 @@
-/*
- * flowsensor.h
+/******************************************************************************
+ * File:        flowsensor.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 8 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the flow sensor module. It
+ *   includes the main configuration and status structure `FLOWSENSOR_t`,
+ *   enumerations for different flow statistics, and function prototypes for
+ *   initializing the module, retrieving flow data, and managing flags.
+ *
+ * Notes:
+ *   - The `FLOWSENSOR_t` structure contains both configuration parameters and
+ *     runtime state, which should be managed carefully.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SENSOR_FLOWSENSOR_H_
 #define SENSOR_FLOWSENSOR_H_

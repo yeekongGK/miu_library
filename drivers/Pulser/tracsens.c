@@ -1,9 +1,26 @@
-/*
- * tracsens.c
+/******************************************************************************
+ * File:        tracsens.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for a TRACSENS-type pulser, which uses a
+ *   quadrature encoder to detect pulses and direction. It configures the
+ *   LPTIM1 peripheral in encoder mode to count pulses from two input channels.
+ *   The driver handles forward and backward counting, manages counter
+ *   overflows, and includes logic to detect and compensate for specific error
+ *   patterns in the pulse sequence.
+ *
+ * Notes:
+ *   - The driver supports both normal and inverted counter modes.
+ *   - Error pattern detection logic is included to handle potential magnetic
+ *     tampering or sensor faults.
+ *
+ * To Do:
+ *   - The error handling logic could be further optimized for clarity.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "tracsens.h"

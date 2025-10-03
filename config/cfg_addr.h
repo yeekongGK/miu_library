@@ -1,9 +1,24 @@
-/*
- * cfg_addr.h
+/******************************************************************************
+ * File:        cfg_addr.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 1 Mar 2022
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the memory map for the application's configuration data
+ *   stored in Flash memory. It specifies the sizes and starting addresses for
+ *   different partitions, including the bootloader, application partitions,
+ *   and the main configuration area. It also provides macros for the memory
+ *   addresses of individual configuration structures.
+ *
+ * Notes:
+ *   - The memory layout is dependent on the MCU's Flash size and page size.
+ *   - Changes to any configuration structure size will affect the memory map.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef CFG_ADDR_H_
 #define CFG_ADDR_H_

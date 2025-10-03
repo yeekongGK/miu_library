@@ -1,9 +1,28 @@
-/*
- * secure.c
+/******************************************************************************
+ * File:        security.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 25 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file provides a high-level security wrapper for cryptographic
+ *   operations. It abstracts underlying AES and ECC (Elliptic Curve
+ *   Cryptography) libraries to offer simplified functions for encryption,
+ *   decryption, and key management. It supports AES in ECB, CBC, and CTR modes,
+ *   and includes functionality for generating ECDH key pairs.
+ *
+ * Notes:
+ *   - The module manages multiple cryptographic keys, which can be switched at
+ *     runtime.
+ *   - It relies on the `aes.c` and `uECC.c` libraries for the core
+ *     cryptographic algorithms.
+ *   - AES-GCM and ECDH key derivation functionalities are commented out.
+ *
+ * To Do:
+ *   - Review and potentially enable or remove the commented-out AES-GCM and
+ *     ECDH code.
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "cfg.h"

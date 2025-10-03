@@ -1,9 +1,23 @@
-/*
- * cfg_init.c
+/******************************************************************************
+ * File:        cfg_init.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 8 Mar 2022
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file initializes the global configuration structure (`config`) with
+ *   default values. These defaults serve as the baseline configuration for
+ *   the application, which can later be overridden by values loaded from
+ *   Flash memory.
+ *
+ * Notes:
+ *   - This file defines the `config` variable, which is declared as `extern`
+ *     in `cfg.h`.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "main.h"

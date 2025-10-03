@@ -1,9 +1,25 @@
-/*
- * msg.h
+/******************************************************************************
+ * File:        msg.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 24 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface and data structures for the message
+ *   queuing and processing system. It includes definitions for the message
+ *   structure (`MSG_t`), Type-Length-Value (TLV) structure, and enumerations
+ *   for various TLV tags used for inter-task communication. It also declares
+ *   the function prototypes for managing the message queue and processing
+ *   messages.
+ *
+ * Notes:
+ *   - This module is central to the application's command and data handling.
+ *
+ * To Do:
+ *   - The large number of tag definitions could be better organized, perhaps
+ *     into separate files based on the subsystem they belong to.
+ *
+ ******************************************************************************/
 
 #ifndef MSG_MSG_H_
 #define MSG_MSG_H_

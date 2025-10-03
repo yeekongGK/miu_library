@@ -1,9 +1,22 @@
-/*
- * lptim1.h
+/******************************************************************************
+ * File:        lptim1.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 25 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file declares the public interface for registering LPTIM1 interrupt
+ *   callbacks. It provides function prototypes that allow other modules to
+ *   set custom handlers for compare match, auto-reload match, and counter
+ *   direction change events.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef PULSECNTR_LPTIM1_H_
 #define PULSECNTR_LPTIM1_H_

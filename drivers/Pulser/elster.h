@@ -1,9 +1,22 @@
-/*
- * elster.h
+/******************************************************************************
+ * File:        elster.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 3 Aug 2022
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the Elster-type pulser driver.
+ *   It includes the configuration structure `ELSTER_t` and function
+ *   prototypes for initializing the driver, controlling the counting process,
+ *   and retrieving pulse data and flow direction.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef PULSER_ELSTER_H_
 #define PULSER_ELSTER_H_

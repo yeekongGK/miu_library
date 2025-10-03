@@ -1,3 +1,26 @@
+/******************************************************************************
+ * File:        uECC_vli.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file defines the Very Long Integer (VLI) manipulation functions used
+ *   by the uECC (micro-ECC) library. It provides an API for low-level
+ *   arithmetic operations on large integers, such as addition, subtraction,
+ *   multiplication, modular inverse, and point multiplication, which are
+ *   fundamental for Elliptic Curve Cryptography.
+ *
+ * Notes:
+ *   - This file is part of the uECC library and includes a copyright notice
+ *     from Kenneth MacKay.
+ *   - The API is only available if `uECC_ENABLE_VLI_API` is enabled.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
+
 /* Copyright 2015, Kenneth MacKay. Licensed under the BSD 2-clause license. */
 
 #ifndef _UECC_VLI_H_

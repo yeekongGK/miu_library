@@ -1,9 +1,22 @@
-/*
- * cfg_keys.h
+/******************************************************************************
+ * File:        cfg_keys.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 28 Dec 2020
- *      Author: muhammad.ahamad@georgekent.net
- */
+ * Description:
+ *   This file defines various cryptographic keys used for security operations
+ *   within the application. It includes master keys, configuration keys
+ *   (production, development, user), and operational keys.
+ *
+ * Notes:
+ *   - Contains keys for specific past deployments (e.g., AIS).
+ *
+ * To Do:
+ *   - Consider moving keys to a more secure storage mechanism instead of
+ *     hardcoding them in the source.
+ *
+ ******************************************************************************/
 
 #ifndef INC_CFG_KEYS_H_
 #define INC_CFG_KEYS_H_

@@ -1,12 +1,27 @@
-/*
- * rtc.h
+/******************************************************************************
+ * File:        rtc_cfg.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 20 Nov 2020
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface and configuration macros for the
+ *   Real-Time Clock (RTC) module. It includes type definitions for managing
+ *   RTC alarms and tick types, as well as compile-time constants for RTC
+ *   prescalers and default time/date settings. It also declares the function
+ *   prototypes for initializing and interacting with the RTC.
+ *
+ * Notes:
+ *   - The default time and date values are derived from the main `config`
+ *     structure.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
-#ifndef INC_RTC_H_
-#define INC_RTC_H_
+#ifndef RTC_CFG_H_
+#define RTC_CFG_H_
 
 #include "main.h"
 

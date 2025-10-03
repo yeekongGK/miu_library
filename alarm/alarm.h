@@ -1,9 +1,22 @@
-/*
- * alarm.h
+/******************************************************************************
+ * File:        alarm.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 4 Oct 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the interface for the alarm system. It includes
+ *   definitions for alarm types, states, thresholds, and data structures
+ *   for managing alarm objects. It also declares functions for initializing,
+ *   configuring, and processing alarms.
+ *
+ * Notes:
+ *   - The ALARM_t structure requires 8-byte alignment.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef ALARM_ALARM_H_
 #define ALARM_ALARM_H_

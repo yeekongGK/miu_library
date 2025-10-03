@@ -1,9 +1,23 @@
-/*
- * loggerutil.c
+/******************************************************************************
+ * File:        loggerutil.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 8 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file provides utility functions for the logger module. It includes
+ *   helpers for time-based calculations related to log scheduling,
+ *   configuration of log start times, and detection of device status changes
+ *   to trigger event logs.
+ *
+ * Notes:
+ *   - Much of the functionality, particularly in `LOGGERUTIL_ConfigureLogTickStart`,
+ *     is commented out and appears to be legacy code.
+ *
+ * To Do:
+ *   - Review and clean up the commented-out code.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "loggerutil.h"

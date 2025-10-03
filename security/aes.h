@@ -1,3 +1,25 @@
+/******************************************************************************
+ * File:        aes.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file defines the public interface for the AES encryption library. It
+ *   provides configuration macros to enable different modes of operation (ECB,
+ *   CBC, CTR) and key sizes (128, 192, 256 bits). It also defines the `AES_ctx`
+ *   context structure and declares function prototypes for initialization,
+ *   encryption, and decryption.
+ *
+ * Notes:
+ *   - This implementation is based on the AES standard and allows for
+ *     compile-time configuration of its features.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
+
 #ifndef _AES_H_
 #define _AES_H_
 

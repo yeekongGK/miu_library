@@ -1,9 +1,23 @@
-/*
- * syssleep.h
+/******************************************************************************
+ * File:        syssleep.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 2 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the system sleep management
+ *   module. It includes function prototypes for initializing the sleep
+ *   manager, requesting sleep periods, checking task wakeup status, and
+ *   entering low-power modes. It also defines constants for sleep period
+ *   configuration.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SYSTEM_SYSSLEEP_H_
 #define SYSTEM_SYSSLEEP_H_

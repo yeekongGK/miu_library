@@ -1,33 +1,24 @@
-///////////////////////////////////////////////////////////////////////////////
-// \author (c) Marco Paland (info@paland.com)
-//             2014-2019, PALANDesign Hannover, Germany
-//
-// \license The MIT License (MIT)
-//
-// Permission is hereby granted, free of charge, to any person obtaining a copy
-// of this software and associated documentation files (the "Software"), to deal
-// in the Software without restriction, including without limitation the rights
-// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-// copies of the Software, and to permit persons to whom the Software is
-// furnished to do so, subject to the following conditions:
-//
-// The above copyright notice and this permission notice shall be included in
-// all copies or substantial portions of the Software.
-//
-// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-// THE SOFTWARE.
-//
-// \brief Tiny printf, sprintf and snprintf implementation, optimized for speed on
-//        embedded systems with a very limited resources.
-//        Use this instead of bloated standard/newlib printf.
-//        These routines are thread safe and reentrant.
-//
-///////////////////////////////////////////////////////////////////////////////
+/******************************************************************************
+ * File:        printf.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file defines the public interface for a tiny, thread-safe, and
+ *   reentrant implementation of printf, sprintf, and snprintf. It is
+ *   optimized for embedded systems and provides an alternative to standard
+ *   library functions. It includes macros to override standard function names
+ *   and declares the function prototypes for the custom implementation.
+ *
+ * Notes:
+ *   - This implementation is based on code by Marco Paland and is licensed
+ *     under the MIT License.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef _PRINTF_H_
 #define _PRINTF_H_

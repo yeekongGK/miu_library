@@ -1,9 +1,23 @@
-/*
- * positionsensor.h
+/******************************************************************************
+ * File:        positionsensor.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 16 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the position sensor driver,
+ *   which is based on an accelerometer. It provides function prototypes for
+ *   reading acceleration data (X, Y, Z), managing tilt event counters and
+ *   flags, and initializing the sensor. It also defines an enumeration for
+ *   different operational modes.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SENSOR_ACCELEROMETER_H_
 #define SENSOR_ACCELEROMETER_H_

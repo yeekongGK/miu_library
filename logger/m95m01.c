@@ -1,9 +1,25 @@
-/*
- * eeprom.c
+/******************************************************************************
+ * File:        m95m01.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 14 May 2018
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for the M95M01 SPI EEPROM memory chip.
+ *   It manages low-level SPI communication, including command transmission and
+ *   data read/write operations. A transaction queue is used to handle
+ *   asynchronous requests, and state machines manage the write and read
+ *   processes, including write-enable, busy checking, and data validation.
+ *   The driver also defines and manages memory partitions within the EEPROM.
+ *
+ * Notes:
+ *   - This driver is built on top of a lower-level SPI driver (`spi1.c`).
+ *   - It includes error handling and retry mechanisms for robust communication.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "m95m01.h"

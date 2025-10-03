@@ -1,9 +1,25 @@
-/*
- * meterlog.h
+/******************************************************************************
+ * File:        devicelog.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the device logging module. It
+ *   includes the data structures for log entries (`DEVICELOG_Log_t`) and
+ *   runtime state (`DEVICELOG_Rte_t`), as well as enumerations and type
+ *   definitions for managing logging behavior. It provides function prototypes
+ *   for writing and reading logs from an external EEPROM, managing log counts,
+ *   and configuring periodic and tamper-based logging.
+ *
+ * Notes:
+ *   - The log size must be a divisor of the EEPROM page size (256 bytes) for
+ *     efficient writing.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef LOGGER_DEVICELOG_H_
 #define LOGGER_DEVICELOG_H_

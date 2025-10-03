@@ -1,9 +1,24 @@
-/*
- * configuration.c
+/******************************************************************************
+ * File:        cfg.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 28 Dec 2020
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the core configuration management for the device. It
+ *   handles loading configurations from Flash, saving them, and applying
+ *   default settings. It includes functions for checksum validation, memory
+ *   partition management, and backward compatibility for older config versions.
+ *
+ * Notes:
+ *   - Configuration data is structured into multiple parts (System, Failsafe,
+ *     NBIoT, etc.) and stored in designated Flash memory regions.
+ *   - Handles versioning to ensure smooth upgrades and prevent config corruption.
+ *
+ * To Do:
+ *   - Review and simplify the backward compatibility logic in CFG_Load.
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "main.h"

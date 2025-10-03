@@ -1,3 +1,26 @@
+/******************************************************************************
+ * File:        max17260.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file provides the low-level driver for the MAX17260 fuel gauge IC.
+ *   It implements the hardware abstraction layer (HAL) for I2C communication
+ *   and provides functions for reading from and writing to the device's
+ *   registers. The driver also includes initialization routines to configure
+ *   the fuel gauge after a power-on reset, along with debugging functions to
+ *   print register values.
+ *
+ * Notes:
+ *   - The I2C read/write functions are implemented based on the project's
+ *     I2C abstraction and must be adapted if the underlying hardware changes.
+ *   - This driver is used by higher-level modules like `batterysensor.c`.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 #include "max17260.h"
 #include "main.h"
 #include "i2c.h"

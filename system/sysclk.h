@@ -1,9 +1,22 @@
-/*
- * sysclk.h
+/******************************************************************************
+ * File:        sysclk.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 5 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the system clock management
+ *   module. It includes an enumeration for different clock sources and
+ *   declares the function prototypes for initializing the system clock and
+ *   retrieving timestamps.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SYSTEM_SYSCLK_H_
 #define SYSTEM_SYSCLK_H_

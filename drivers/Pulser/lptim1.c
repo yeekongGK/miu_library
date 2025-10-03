@@ -1,9 +1,23 @@
-/*
- * lptim1.c
+/******************************************************************************
+ * File:        lptim1.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 25 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the callback handler registration for the LPTIM1
+ *   peripheral. It allows other modules to register custom callback functions
+ *   for various LPTIM1 events, such as compare match, auto-reload match, and
+ *   counter direction changes. This provides a flexible way to handle
+ *   LPTIM1 interrupts without modifying the main interrupt vector.
+ *
+ * Notes:
+ *   - The actual LPTIM1 interrupt handler must call these function pointers.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 #include "common.h"
 #include "lptim1.h"
 

@@ -1,9 +1,23 @@
-/*
- * digitalsensor.h
+/******************************************************************************
+ * File:        digitalsensor.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 16 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the digital sensor driver. It
+ *   provides function prototypes for initializing various digital input
+ *   sensors, such as magnetic and tamper sensors, and for retrieving their
+ *   status, event counts, and flags. The interface allows higher-level modules
+ *   to interact with these sensors and respond to their events.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SENSOR_DIGITALSENSOR_H_
 #define SENSOR_DIGITALSENSOR_H_

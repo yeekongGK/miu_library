@@ -1,9 +1,25 @@
-/*
- * logger.c
+/******************************************************************************
+ * File:        logger.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the main logger module, which acts as a transactional
+ *   layer for various logging subsystems like device and radio logs. It manages
+ *   a queue of logging requests, handles the interaction with the M95M01
+ *   EEPROM driver for persistent storage, and provides a TLV interface for
+ *   external control and data retrieval.
+ *
+ * Notes:
+ *   - It uses a transaction queue to handle asynchronous logging operations.
+ *
+ * To Do:
+ *   - The `LOGGER_Test` function, which performs synchronous blocking
+ *     operations, could be improved to be non-blocking or used only in a
+ *     specific test mode.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "logger.h"

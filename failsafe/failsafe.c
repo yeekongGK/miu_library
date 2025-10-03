@@ -1,9 +1,24 @@
-/*
- * failsafe.c
+/******************************************************************************
+ * File:        failsafe.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 19 Nov 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the failsafe mechanisms for the device, including
+ *   software and hardware watchdogs (SWDG, IWDG, WWDG), power voltage
+ *   detection (PVD), and brown-out reset (BOR) handling. It is responsible
+ *   for initializing these hardware features, checking for various reset
+ *   conditions upon startup, logging reset events, and performing periodic
+ *   checks to ensure system stability.
+ *
+ * Notes:
+ *   - It uses RTC backup registers to persist reset flags across reboots.
+ *
+ * To Do:
+ *   - The reset checking logic in `FAILSAFE_Reset_Check` could be simplified.
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "failsafe.h"

@@ -1,9 +1,26 @@
-/*
- * positionsensor.c
+/******************************************************************************
+ * File:        positionsensor.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 16 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for the position sensor, which utilizes
+ *   the LIS2DH12 accelerometer. It provides functions to read acceleration
+ *   data (X, Y, Z), configure the device for 6D orientation detection, and
+ *   handle tilt-related interrupts. The driver also includes logic to
+ *   calibrate the sensor's interrupt sensitivity based on its current
+ *   orientation.
+ *
+ * Notes:
+ *   - This driver serves as a higher-level abstraction over the LIS2DH12
+ *     low-level driver.
+ *   - The 6D extended mode is used for detecting changes in device orientation.
+ *
+ * To Do:
+ *   - The calibration logic could be simplified for better clarity.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "positionsensor.h"

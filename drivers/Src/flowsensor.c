@@ -1,9 +1,23 @@
-/*
- * flowsensor.c
+/******************************************************************************
+ * File:        flowsensor.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 8 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the logic for flow sensing and analysis. It
+ *   processes data from the pulser driver to calculate flow rates and detect
+ *   various conditions such as backflow, pipe bursts, no-flow, and leakage.
+ *   It operates as a periodic task to monitor flow status and raise flags when
+ *   predefined thresholds are met.
+ *
+ * Notes:
+ *   - Relies on the Pulser and System modules for input data and timing.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "flowsensor.h"

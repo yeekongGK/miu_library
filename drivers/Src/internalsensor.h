@@ -1,9 +1,22 @@
-/*
- * tempsensor.h
+/******************************************************************************
+ * File:        internalsensor.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 18 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the internal sensor driver. It
+ *   provides function prototypes for initializing the driver and retrieving
+ *   data from the MCU's internal temperature sensor and voltage reference. It
+ *   also includes functions for managing status flags related to these sensors.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SENSOR_INTERNALSENSOR_H_
 #define SENSOR_INTERNALSENSOR_H_

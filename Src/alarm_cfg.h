@@ -1,12 +1,25 @@
-/*
- * alarm.h
+/******************************************************************************
+ * File:        alarm_cfg.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 4 Oct 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface and configuration structures for the
+ *   alarm module. It includes enumerations for alarm operational states, alarm
+ *   types, and threshold conditions. It also defines the data structures for
+ *   individual alarm objects and the main alarm configuration block.
+ *
+ * Notes:
+ *   - The ALARM_t structure requires 8-byte alignment.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
-#ifndef ALARM_ALARM_H_
-#define ALARM_ALARM_H_
+#ifndef ALARM_CFG_H_
+#define ALARM_CFG_H_
 
 #include "main.h"
 #include "sensor.h"

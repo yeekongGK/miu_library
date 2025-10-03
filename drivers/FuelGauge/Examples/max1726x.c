@@ -1,14 +1,22 @@
-/*
- * max1726x.c
+/******************************************************************************
+ * File:        max1726x.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *	max1726x example code
- *	include:
- *		#include "max17260.h"
- *		#include "max1726x.h"
+ * Description:
+ *   This file contains example code demonstrating the usage of the MAX1726x
+ *   fuel gauge driver. It initializes the sensor, checks for a Power-On-Reset
+ *   (POR) condition, and enters a loop to periodically read and print the
+ *   State of Charge (SOC), voltage, and current.
  *
- *  Created on: Sep 30, 2025
- *      Author: yee-kong.chong
- */
+ * Notes:
+ *   - This is example code and may not be part of the main application firmware.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 
 int main(void)

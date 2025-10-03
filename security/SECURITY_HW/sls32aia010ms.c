@@ -1,14 +1,25 @@
-/*
- * sls32aia010ms.c
+/******************************************************************************
+ * File:        sls32aia010ms.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 19 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
+ * Description:
+ *   This file provides the driver for the SLS32AIA010MS hardware security
+ *   element. It handles I2C communication to read from and write to the
+ *   device's registers. It includes functions for initialization, reset, and
+ *   low-level register access.
  *
+ * Notes:
+ *   - This driver relies on an underlying I2C implementation (`i2c.c`).
+ *   - Some I/O control functions are commented out and may need to be
+ *     re-implemented or replaced.
  *
- *      PIC: CYK
- *      TODO:
- *      	* replace ioctrl
- */
+ * To Do:
+ *   - Replace the commented-out `ioctrl` calls.
+ *   - Clean up the retry logic in `SLS32AIA_Register_Read`.
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "sls32aia010ms.h"

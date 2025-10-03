@@ -1,9 +1,27 @@
-/*
- * digitalsensor.c
+/******************************************************************************
+ * File:        digitalsensor.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 16 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for digital input sensors, including
+ *   magnetic (reed switch) and tamper sensors. It configures GPIO pins as
+ *   external interrupts to detect events such as magnet presence and tamper
+ *   activation. The driver maintains counters for each sensor event and
+ *   provides functions to initialize the sensors, retrieve event counts, and
+ *   manage status flags.
+ *
+ * Notes:
+ *   - The driver uses EXTI interrupts to handle sensor events asynchronously.
+ *   - The `DIGISENSOR_Task` function should be called periodically to process
+ *     pending interrupts.
+ *
+ * To Do:
+ *   - Consolidate the repetitive logic for counter and flag management into a
+ *     more generic structure or function.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "digitalsensor.h"

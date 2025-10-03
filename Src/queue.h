@@ -1,9 +1,22 @@
-/*
- * queue.h
+/******************************************************************************
+ * File:        queue.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 30 Aug 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for a generic FIFO (First-In,
+ *   First-Out) queue. It includes the `QUEUE_FIFO_t` structure, which holds
+ *   the queue's state, and declares functions for initializing, pushing,
+ *   popping, and un-popping elements.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef QUEUE_H_
 #define QUEUE_H_

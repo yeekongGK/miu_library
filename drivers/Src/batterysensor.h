@@ -1,9 +1,23 @@
-/*
- * coulombcounter.h
+/******************************************************************************
+ * File:        batterysensor.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 19 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the battery sensor driver. It
+ *   provides function prototypes for initializing the sensor, reading various
+ *   battery metrics (e.g., capacity, voltage, current, temperature), and
+ *   controlling its operational modes like hibernate.
+ *
+ * Notes:
+ *   - The driver relies on configuration values defined in the main `config`
+ *     structure.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SENSOR_BATTERYSENSOR_H_
 #define SENSOR_BATTERYSENSOR_H_

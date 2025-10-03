@@ -1,9 +1,29 @@
-/*
- * meterlog.c
+/******************************************************************************
+ * File:        devicelog.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the device logging functionality, which includes both
+ *   periodic and tamper-triggered data logging. It constructs log entries
+ *   containing a snapshot of various sensor values (meter reading, voltage,
+ *   temperature, etc.) and manages writing these logs to an external M95M01
+ *   EEPROM. The module uses the RTC alarm to schedule periodic logs and
+ *   handles asynchronous write transactions to the EEPROM.
+ *
+ * Notes:
+ *   - Log storage is managed via the M95M01 EEPROM driver.
+ *   - Periodic logging is synchronized with the RTC and can be configured with
+ *     different tick types and start times.
+ *   - Tamper logging is triggered by changes in the system status code from
+ *     the sensor module.
+ *
+ * To Do:
+ *   - The transaction management with `pM95M01WriteTrx` and `pM95M01ReadTrx`
+ *     could be simplified to reduce complexity.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "devicelog.h"

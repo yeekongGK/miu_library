@@ -1,9 +1,25 @@
-/*
- * lcsens.h
+/******************************************************************************
+ * File:        lcsens.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 22 Feb 2022
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the LC (Inductor-Capacitor)
+ *   proximity sensor driver. It includes hardware-specific macros for direct
+ *   peripheral control, data structures (`LCSENS_t`, `LCSENS_Sensor_t`) for
+ *   sensor configuration and state management, and function prototypes for
+ *   initialization, calibration, and data retrieval.
+ *
+ * Notes:
+ *   - The file contains many low-level hardware control macros that are
+ *     performance-sensitive.
+ *
+ * To Do:
+ *   - The macros could be replaced with inline functions for better type
+ *     safety and readability.
+ *
+ ******************************************************************************/
 
 #ifndef PULSER_LCSENS_H_
 #define PULSER_LCSENS_H_

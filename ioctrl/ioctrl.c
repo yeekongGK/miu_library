@@ -1,9 +1,26 @@
-/*
- * ioctrl.c
+/******************************************************************************
+ * File:        ioctrl.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 15 Dec 2020
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the I/O control functions for managing various
+ *   hardware peripherals and power signals on the device. It provides
+ *   functions to initialize and control power for the main system, NFC chip,
+ *   and radio module. It also handles control signals for radio power-on,
+ *   reset, and PSM (Power Saving Mode) wakeup. Additionally, it includes
+ *   functions for interacting with the Secure Element (SE) and detecting SIM
+ *   card presence.
+ *
+ * Notes:
+ *   - Some functions have conditional compilation checks (e.g.,
+ *     `CFG_DEVICE_USE_RADIO_SW`) to support different hardware revisions.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 //#include "common.h"
 #include "main.h"
 #include "sys.h"

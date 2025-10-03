@@ -1,9 +1,24 @@
-/*
- * utili.c
+/******************************************************************************
+ * File:        utili.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 7 Jul 2018
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file provides a collection of utility functions used throughout the
+ *   application. These include functions for random number generation, string
+ *   and data type conversions (BCD, hex, float), checksum calculations
+ *   (CRC-16, CRC-8), and time/date manipulation. It also includes helpers for
+ *   time-based calculations and scheduling.
+ *
+ * Notes:
+ *   - Provides essential helper functions for various modules.
+ *
+ * To Do:
+ *   - Some of the time manipulation logic, especially around
+ *     `UTILI_Mask_GetMatchedTime`, is complex and could be simplified.
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include <string.h>

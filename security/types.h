@@ -1,3 +1,24 @@
+/******************************************************************************
+ * File:        types.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file defines platform-specific types and macros for the uECC
+ *   (micro-ECC) library. It automatically detects the target architecture to
+ *   configure word sizes and other parameters needed for the elliptic curve
+ *   cryptography operations.
+ *
+ * Notes:
+ *   - This file is part of the uECC library and includes a copyright notice
+ *     from Kenneth MacKay.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
+
 /* Copyright 2015, Kenneth MacKay. Licensed under the BSD 2-clause license. */
 
 #ifndef _UECC_TYPES_H_

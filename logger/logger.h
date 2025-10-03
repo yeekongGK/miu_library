@@ -1,9 +1,25 @@
-/*
- * logger.h
+/******************************************************************************
+ * File:        logger.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the main logger module. It
+ *   provides a transactional layer for various logging subsystems, defining
+ *   data structures for log transactions (`LOGGER_Transaction_t`), synchronous
+ *   logging (`LOGGER_SyncRte_t`), and the main configuration (`LOG_t`). It
+ *   also declares function prototypes for managing the logger queue,
+ *   initializing the logger, and handling TLV requests.
+ *
+ * Notes:
+ *   - This module acts as a high-level abstraction over specific loggers like
+ *     `devicelog`.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef LOGGER_LOGGER_H_
 #define LOGGER_LOGGER_H_

@@ -1,9 +1,26 @@
-/*
- * sys.h
+/******************************************************************************
+ * File:        sys.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 18 Dec 2020
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the main system module. It
+ *   includes core enumerations for task IDs, RTC backup registers, system
+ *   request types, and task states. It also declares system-wide function
+ *   prototypes for time management, power control, task scheduling, and system
+ *   reset handling.
+ *
+ * Notes:
+ *   - This header is central to the application's architecture, defining the
+ *     task and system request framework.
+ *   - It relies on `sysclk.h` and `syspwr.h` for underlying clock and power
+ *     implementations.
+ *
+ * To Do:
+ *   - The large number of TLV and info tags could be better organized.
+ *
+ ******************************************************************************/
 
 #ifndef INC_SYS_H_
 #define INC_SYS_H_

@@ -1,9 +1,24 @@
-/*
- * diagnostic.c
+/******************************************************************************
+ * File:        diag.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 27 Mar 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the diagnostic logging system. It provides functions
+ *   to record diagnostic codes with integer or float values into a FIFO
+ *   queue. It also includes functions to pop and un-pop log entries, and a
+ *   TLV handler for external communication to retrieve diagnostic data.
+ *
+ * Notes:
+ *   - Diagnostic logs are stored in a queue located in a dedicated RAM
+ *     section (.ram2).
+ *   - Depends on the Queue and System modules.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "main.h"

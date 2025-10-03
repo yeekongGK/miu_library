@@ -1,9 +1,28 @@
-/*
- * lcsens.c
+/******************************************************************************
+ * File:        lcsens.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 22 Feb 2022
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for a 3-coil LC (Inductor-Capacitor)
+ *   proximity sensor, used for detecting rotational movement. It configures
+ *   and uses various peripherals including LPTIM, COMP, DAC, and GPIOs to
+ *   drive the LC circuits and count oscillations to determine the rotor's
+ *   position. The driver includes logic for sampling the sensors, processing
+ *   the resulting state transitions to determine direction and revolutions,
+ *   and a calibration routine to tune sensor thresholds.
+ *
+ * Notes:
+ *   - The driver is highly dependent on specific hardware connections and
+ *     peripheral configurations (LPTIM1, LPTIM2, COMP2, DAC1).
+ *   - Implements both static and dynamic calibration routines.
+ *
+ * To Do:
+ *   - The calibration logic is complex and could be simplified or better
+ *     documented.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "lcsens.h"

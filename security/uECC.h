@@ -1,3 +1,25 @@
+/******************************************************************************
+ * File:        uECC.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file defines the public API for the micro-ECC (uECC) library, a
+ *   small and efficient implementation of Elliptic Curve Cryptography. It
+ *   provides functions for key generation, shared secret computation, and
+ *   ECDSA signing/verification. The library is configurable to support
+ *   various standard curves (secp160r1, secp192r1, etc.).
+ *
+ * Notes:
+ *   - This file is part of the uECC library and includes a copyright notice
+ *     from Kenneth MacKay.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
+
 /* Copyright 2014, Kenneth MacKay. Licensed under the BSD 2-clause license. */
 
 #ifndef _UECC_H_

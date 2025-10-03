@@ -1,9 +1,23 @@
-/*
- * rtcalarm.c
+/******************************************************************************
+ * File:        rtcalarm_cfg.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 2 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file provides the configuration and management functions for the RTC
+ *   (Real-Time Clock) Alarm A. It includes functions to enable and disable the
+ *   alarm, set and get the alarm tick counter, and handle the alarm interrupt
+ *   callback. The alarm can be configured to trigger based on different time
+ *   units, such as seconds, minutes, or hours.
+ *
+ * Notes:
+ *   - This module is dependent on the base RTC configuration.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "rtcalarm.h"

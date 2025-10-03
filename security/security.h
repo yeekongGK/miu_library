@@ -1,9 +1,22 @@
-/*
- * security.h
+/******************************************************************************
+ * File:        security.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 11 Dec 2018
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the high-level security module.
+ *   It declares function prototypes for initializing the security system,
+ *   managing cryptographic keys, and performing AES encryption and decryption
+ *   in various modes (ECB, CBC, CTR).
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SECURE_SECURITY_H_
 #define SECURE_SECURITY_H_

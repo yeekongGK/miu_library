@@ -1,9 +1,23 @@
-/*
- * alarm.c
+/******************************************************************************
+ * File:        alarm_cfg.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 4 Oct 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the core logic for the alarm system. It manages
+ *   alarm states, evaluates sensor data against configured thresholds, and
+ *   handles alarm lifecycle events such as debouncing and activation periods.
+ *
+ * Notes:
+ *   - The alarm processing is managed by the ALARM_Task function, which
+ *     operates as a state machine.
+ *   - Depends on the Sensor and System modules for input data and timing.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 //#include "common.h"
 #include "alarm_cfg.h"

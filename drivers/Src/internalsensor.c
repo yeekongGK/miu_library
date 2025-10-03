@@ -1,9 +1,24 @@
-/*
- * tempsensor.c
+/******************************************************************************
+ * File:        internalsensor.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 18 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for the microcontroller's internal sensors,
+ *   primarily the temperature sensor and the internal voltage reference (VRef).
+ *   It serves as a wrapper for the MCU's ADC driver (`mcuadc`), providing
+ *   functions to retrieve sensor readings and manage status flags.
+ *
+ * Notes:
+ *   - This module relies on the `mcuadc` driver for the actual hardware
+ *     interaction and data acquisition.
+ *
+ * To Do:
+ *   - The voltage detection logic (`INTSENSOR_Voltage_Detect`) is currently
+ *     commented out and should be reviewed or removed.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "internalsensor.h"

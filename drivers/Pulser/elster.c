@@ -1,9 +1,24 @@
-/*
- * elster.c
+/******************************************************************************
+ * File:        elster.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 3 Aug 2022
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the driver for an Elster-type pulser sensor. It uses
+ *   the LPTIM1 peripheral to count pulses and an external GPIO to determine
+ *   the flow direction (forward or backward). The driver provides functions to
+ *   initialize the sensor, start/stop counting, and get the net pulse value.
+ *
+ * Notes:
+ *   - Relies on LPTIM1 for pulse counting and an EXTI line for direction sensing.
+ *   - Handles counter overflow via the auto-reload interrupt.
+ *
+ * To Do:
+ *   - The `ELSTER_Power` and `ELSTER_StopCounting` functions are placeholders
+ *     and may require implementation.
+ *
+ ******************************************************************************/
 
 #include "common.h"
 #include "elster.h"

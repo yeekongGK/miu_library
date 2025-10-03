@@ -1,9 +1,25 @@
-/*
- * eeprom.h
+/******************************************************************************
+ * File:        m95m01.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 14 May 2018
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the M95M01 SPI EEPROM driver.
+ *   It includes definitions for memory partitions, SPI commands, and status
+ *   bits. It also specifies the data structures for managing asynchronous
+ *   read/write transactions (`M95M01_Transaction_t`) and enumerations for
+ *   transaction types, states, and status codes. Function prototypes for
+ *   initializing the driver, managing the transaction queue, and checking for
+ *   errors are also declared.
+ *
+ * Notes:
+ *   - The EEPROM memory map is partitioned for different data logging purposes.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef METER_LOG_M95M01_H_
 #define METER_LOG_M95M01_H_

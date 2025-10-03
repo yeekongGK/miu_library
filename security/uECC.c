@@ -1,3 +1,26 @@
+/******************************************************************************
+ * File:        uECC.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
+ *
+ * Description:
+ *   This file contains the implementation of the micro-ECC (uECC) library,
+ *   which provides Elliptic Curve Cryptography (ECC) functions. It includes
+ *   functionalities for key generation (uECC_make_key), computing shared
+ *   secrets (uECC_shared_secret), and ECDSA signing (uECC_sign) and
+ *   verification (uECC_verify). The library is designed to be small and
+ *   efficient for use in embedded systems.
+ *
+ * Notes:
+ *   - This file is part of the uECC library and includes a copyright notice
+ *     from Kenneth MacKay.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
+
 /* Copyright 2014, Kenneth MacKay. Licensed under the BSD 2-clause license. */
 
 #include "uECC.h"

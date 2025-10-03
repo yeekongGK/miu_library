@@ -1,9 +1,26 @@
-/*
- * sensor.h
+/******************************************************************************
+ * File:        sensor.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 18 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the main sensor management
+ *   module. It consolidates various physical and logical sensors into a
+ *   unified API. It includes a comprehensive enumeration of all sensor types
+ *   (`SENSOR_Sensor_t`), data structures for sensor objects and resources,
+ *   and the main configuration structure (`SENSOR_t`).
+ *
+ * Notes:
+ *   - This file provides a high-level abstraction over individual sensor
+ *     drivers, making it the central point for sensor data access.
+ *   - Includes complex data structures likely for a communication protocol.
+ *
+ * To Do:
+ *   - The large number of object structures (`SENSOR_Object..._t`) could be
+ *     simplified or better organized to improve readability.
+ *
+ ******************************************************************************/
 
 #ifndef SENSOR_SENSOR_H_
 #define SENSOR_SENSOR_H_

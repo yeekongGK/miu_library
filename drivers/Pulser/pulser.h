@@ -1,9 +1,25 @@
-/*
- * pulsecntr.h
+/******************************************************************************
+ * File:        pulser.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 13 Jan 2021
- *      Author: h
- */
+ * Description:
+ *   This file defines the public interface for the generic pulser driver, which
+ *   acts as an abstraction layer for various pulser sensor types (e.g.,
+ *   TRACSENS, LCSENS, ELSTER). It includes the main configuration structure
+ *   `PULSER_t`, enumerations for different modes and directions, and function
+ *   prototypes for initializing the driver, getting/setting pulse values, and
+ *   converting between pulses and physical units.
+ *
+ * Notes:
+ *   - The active pulser driver is selected at runtime based on the
+ *     `PULSER_Mode_t` setting.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef PULSECNTR_PULSECNTR_H_
 #define PULSECNTR_PULSECNTR_H_

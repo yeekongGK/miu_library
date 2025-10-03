@@ -1,9 +1,24 @@
-/*
- * syspower.c
+/******************************************************************************
+ * File:        syspwr.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 5 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements system-level power management functions. It includes
+ *   routines for initializing GPIO pins to a low-power state (analog mode)
+ *   and for controlling the power supply to various peripherals, such as the
+ *   radio modem.
+ *
+ * Notes:
+ *   - The power-up sequence considers the state of the magnetic tamper sensor
+ *     to determine if the main power should be latched on.
+ *
+ * To Do:
+ *   - The logic for handling power-on after a shutdown or BOR needs to be
+ *     reviewed, as it's currently commented out.
+ *
+ ******************************************************************************/
 
 #include "main.h"
 #include "syspwr.h"

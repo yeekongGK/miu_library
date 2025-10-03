@@ -1,9 +1,23 @@
-/*
- * failsafe.h
+/******************************************************************************
+ * File:        failsafe.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 19 Nov 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the failsafe module. It includes
+ *   the main configuration structure `FAILSAFE_t`, enumerations for reset
+ *   reasons (`FAILSAVE_Reset_t`) and TLV tags, and function prototypes for
+ *   initializing and managing various failsafe mechanisms like watchdogs and
+ *   power monitoring.
+ *
+ * Notes:
+ *   - The `FAILSAFE_t` structure contains both configuration and runtime data.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef FAILSAFE_FAILSAFE_H_
 #define FAILSAFE_FAILSAFE_H_

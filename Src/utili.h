@@ -1,9 +1,22 @@
-/*
- * utili.h
+/******************************************************************************
+ * File:        utili.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 7 Jul 2018
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines a collection of utility functions and macros used
+ *   throughout the application. It includes helpers for data conversion
+ *   (BCD, hex, string), time and date manipulation, checksum calculations,
+ *   and other common tasks.
+ *
+ * Notes:
+ *   - Provides a set of general-purpose tools to simplify common operations.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef UTILI_H_
 #define UTILI_H_

@@ -1,9 +1,22 @@
-/*
- * msg.c
+/******************************************************************************
+ * File:        msgmica.c
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 24 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file appears to contain an alternative or legacy implementation of the
+ *   message processing logic. The entire file is conditionally compiled out
+ *   with `#if 0`, so none of this code is active in the current build. It
+ *   includes functions for processing different groups of TLV-based commands.
+ *
+ * Notes:
+ *   - The code in this file is currently disabled.
+ *
+ * To Do:
+ *   - Review if this file is still needed or can be removed.
+ *
+ ******************************************************************************/
 #if 0
 
 #include "common.h"

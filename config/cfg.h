@@ -1,9 +1,24 @@
-   /*
- * configuration.h
+/******************************************************************************
+ * File:        cfg.h
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
- *  Created on: 28 Dec 2020
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the main configuration structures and interfaces for the
+ *   entire application. It specifies the layout of configuration data,
+ *   including system settings, NBIoT parameters, sensor configurations, and
+ *   more. It also declares the functions for managing the configuration
+ *   lifecycle, such as loading from and saving to Flash memory.
+ *
+ * Notes:
+ *   - The `Config_t` struct is the primary container for all configuration data.
+ *   - Configuration versioning is managed via `CFG_CONFIG_VERSION`.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef INC_CONFIGURATION_H_
 #define INC_CONFIGURATION_H_
