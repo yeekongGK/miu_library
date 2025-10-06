@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        eventlog.c
- * Author:      Firmware Team
- * Created:     03-10-2025
- * Last Update: -
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
  * Description:
  *   This file is intended to implement event logging functionality.

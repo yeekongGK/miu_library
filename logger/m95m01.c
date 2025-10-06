@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        m95m01.c
- * Author:      Firmware Team
- * Created:     03-10-2025
- * Last Update: -
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
  * Description:
  *   This file implements the driver for the M95M01 SPI EEPROM memory chip.

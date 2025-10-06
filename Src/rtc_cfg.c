@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        rtc_cfg.c
- * Author:      Firmware Team
- * Created:     03-10-2025
- * Last Update: -
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
  * Description:
  *   This file provides the configuration and management functions for the

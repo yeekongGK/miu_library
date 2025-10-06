@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        failsafe.c
- * Author:      Firmware Team
- * Created:     03-10-2025
- * Last Update: -
+ * Author:      CYK
+ * Created:     05-10-2025
+ * Last Update: 05-10-2025
  *
  * Description:
  *   This file implements the failsafe mechanisms for the device, including
