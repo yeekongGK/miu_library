@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        lptim2.h
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file declares the public interface for registering LPTIM2 interrupt

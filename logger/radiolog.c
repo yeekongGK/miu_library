@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        radiolog.c
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: 
  *
  * Description:
  *   This file is intended to implement radio communication logging

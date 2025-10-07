@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        alarm.c
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: 
  *
  * Description:
  *   This file implements the core logic for the alarm system. It manages

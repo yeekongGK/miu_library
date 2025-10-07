@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        types.h
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file defines platform-specific types and macros for the uECC

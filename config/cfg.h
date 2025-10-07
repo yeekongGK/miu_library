@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        cfg.h
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file defines the main configuration structures and interfaces for the

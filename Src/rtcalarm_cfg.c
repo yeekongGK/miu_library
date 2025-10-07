@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        rtcalarm_cfg.c
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: 
  *
  * Description:
  *   This file provides the configuration and management functions for the RTC

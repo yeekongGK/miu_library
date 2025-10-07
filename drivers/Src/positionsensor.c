@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        positionsensor.c
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: 
  *
  * Description:
  *   This file implements the driver for the position sensor, which utilizes

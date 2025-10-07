@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        sls32aia010ms.c
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: 
  *
  * Description:
  *   This file provides the driver for the SLS32AIA010MS hardware security

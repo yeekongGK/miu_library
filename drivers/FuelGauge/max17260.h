@@ -1,8 +1,8 @@
 /******************************************************************************
  * File:        max17260.h
- * Author:      CYK
+ * Author:      Firmware Team
  * Created:     05-10-2025
- * Last Update: 05-10-2025
+ * Last Update: -
  *
  * Description:
  *   This file defines the public interface for the MAX17260 fuel gauge
