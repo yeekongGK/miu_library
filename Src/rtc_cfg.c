@@ -21,6 +21,7 @@
  *
  ******************************************************************************/
 
+#include "main.h"
 //#include "common.h"
 #include "rtc.h"
 #include "utili.h"

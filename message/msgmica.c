@@ -17,6 +17,8 @@
  *   - Review if this file is still needed or can be removed.
  *
  ******************************************************************************/
+
+#include "main.h"
 #if 0
 
 #include "common.h"

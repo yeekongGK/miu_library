@@ -19,6 +19,7 @@
  *
  ******************************************************************************/
 
+#include "main.h"
 //#include "common.h"
 #include "alarm_cfg.h"
 #include "sys.h"

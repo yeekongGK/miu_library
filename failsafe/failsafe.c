@@ -20,6 +20,7 @@
  *
  ******************************************************************************/
 
+#include "main.h"
 //#include "common.h"
 #include "failsafe.h"
 //#include "batterysensor.h"

@@ -20,6 +20,7 @@
  *
  ******************************************************************************/
 
+#include "main.h"
 //#include "common.h"
 #include "syssleep.h"
 #include "sysclk.h"

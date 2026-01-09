@@ -24,6 +24,7 @@
  *
  ******************************************************************************/
 
+#include "main.h"
 //#include "common.h"
 #include "cfg.h"
 #include "security.h"

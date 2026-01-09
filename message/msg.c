@@ -22,6 +22,7 @@
  *
  ******************************************************************************/
 
+#include "main.h"
 //#include "common.h"
 #include "msg.h"
 #include "logger.h"

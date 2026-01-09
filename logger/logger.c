@@ -21,6 +21,7 @@
  *
  ******************************************************************************/
 
+#include "main.h"
 #include "common.h"
 #include "logger.h"
 #include "m95m01.h"

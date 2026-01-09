@@ -20,8 +20,8 @@
  *
  ******************************************************************************/
 
-//#include "common.h"
 #include "main.h"
+//#include "common.h"
 #include "rtc.h"
 #include "wwdg.h"
 #include "bus.h"
