@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_NBIOTLWM2M_H_
 #define NBIOT_NBIOTLWM2M_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 #include "bc66link.h"
@@ -77,4 +78,5 @@ void LWM2M_Init(LWM2M_t *_config);
 void LWM2M_Task(void);
 uint8_t LWM2M_TaskState(void);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_NBIOTLWM2M_H_ */

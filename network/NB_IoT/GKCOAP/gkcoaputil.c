@@ -11,6 +11,7 @@
 #include "devicelog.h"
 #include "pulser.h"
 #include <time.h>
+#ifdef NETWORK_MODULE_ENABLED
 
 void GKCOAPUTIL_DeviceToGKCoapLogs(uint8_t *_in, uint8_t *_out, uint16_t _count)
 {
@@ -44,3 +45,5 @@ void GKCOAPUTIL_DeviceToGKCoapLogs(uint8_t *_in, uint8_t *_out, uint16_t _count)
 		memcpy(_out+ (i* sizeof(GKCOAP_Log_t)), &_coapLog, sizeof(GKCOAP_Log_t));
 	}
 }
+
+#endif // NETWORK_MODULE_ENABLED

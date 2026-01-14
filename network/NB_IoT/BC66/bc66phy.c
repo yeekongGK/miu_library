@@ -10,6 +10,7 @@
 #include "lpuart1.h"
 #include "ioctrl.h"
 #include "batterysensor.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 //#define DBG_PrintByte(x)
 
@@ -620,3 +621,5 @@ uint8_t BC66PHY_TaskState(void)
 
 
 
+
+#endif // NETWORK_MODULE_ENABLED

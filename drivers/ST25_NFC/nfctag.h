@@ -7,6 +7,7 @@
 
 #ifndef NFC_NFCTAG_H_
 #define NFC_NFCTAG_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include <stdint.h>
 #include "st25dv_io.h"
@@ -82,4 +83,5 @@ void NFCTAG_ClearNFCInvalidAccessFlag(void);
 void NFCTAG_Task(void);
 uint8_t NFCTAG_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* NFC_NFCTAG_H_ */

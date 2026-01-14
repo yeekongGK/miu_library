@@ -15,6 +15,7 @@
 #include "security.h"
 #include "pulser.h"
 #include "sensor.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 static uint8_t pucMsgBuffer[GKCOAPPKT_CFG_MSG_BUFFER_SIZE];
 
@@ -677,3 +678,5 @@ ErrorStatus GKCOAPPKT_ProcessDownlinkPacket(uint8_t *_rxBuffer, uint32_t _rxLen)
 
 	return SUCCESS;
 }
+
+#endif // NETWORK_MODULE_ENABLED

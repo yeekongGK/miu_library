@@ -23,6 +23,7 @@
 #include "main.h"
 //#include "common.h"
 #include "sysclk.h"
+#ifdef SYSTEM_MODULE_ENABLED
 
 void (*SYSCLK_InitWakeupClock)(void)= NULL;
 
@@ -207,3 +208,5 @@ void SYSCLK_SyncTick(void)
 }
 
 
+
+#endif // SYSTEM_MODULE_ENABLED

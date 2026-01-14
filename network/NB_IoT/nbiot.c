@@ -9,6 +9,7 @@
 #include "nbiot.h"
 #include "lwm2m.h"
 #include "gkcoap.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 static NBIOT_t *pConfig;
 static bool bGKCOAPTaskEnabled= false;
@@ -592,3 +593,5 @@ uint8_t NBIOT_TaskState(void)
 {
 	return (LWM2M_TaskState()| GKCOAP_TaskState());
 }
+
+#endif // NETWORK_MODULE_ENABLED

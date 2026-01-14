@@ -21,6 +21,7 @@
 
 #ifndef SENSOR_ACCELEROMETER_H_
 #define SENSOR_ACCELEROMETER_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 
@@ -44,4 +45,5 @@ void POSSENSOR_Init(void);
 void POSSENSOR_Task(void);
 uint8_t POSSENSOR_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* SENSOR_ACCELEROMETER_H_ */

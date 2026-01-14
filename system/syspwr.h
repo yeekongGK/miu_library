@@ -20,6 +20,7 @@
 
 #ifndef SYS_SYSPWR_H_
 #define SYS_SYSPWR_H_
+#ifdef SYSTEM_MODULE_ENABLED
 
 #include "main.h"
 
@@ -27,4 +28,5 @@ void SYSPWR_InitGPIO(void);
 void SYSPWR_InitPower(void);
 void SYSPWR_EnableModem(bool _enable);
 
+#endif // SYSTEM_MODULE_ENABLED
 #endif /* SYS_SYSPWR_H_ */

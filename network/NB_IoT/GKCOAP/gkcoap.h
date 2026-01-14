@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_GKCOAP_H_
 #define NBIOT_GKCOAP_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 #include <time.h>
@@ -224,4 +225,5 @@ void GKCOAP_Init(GKCOAP_t *_config);
 void GKCOAP_Task(void);
 uint8_t GKCOAP_TaskState(void);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_GKCOAP_H_ */

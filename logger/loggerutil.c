@@ -24,6 +24,7 @@
 #include "loggerutil.h"
 #include "rtc.h"
 #include "rtcalarm.h"
+#ifdef LOGGER_MODULE_ENABLED
 
 static uint8_t ucDevicePrevStatus= 0;
 static bool bIsTamperLog= false;
@@ -196,3 +197,5 @@ void LOGGERUTIL_Init(void)
 	RTCALARM_Init();
 	ucDevicePrevStatus= SENSORS_GetStatusCode();
 }
+
+#endif // LOGGER_MODULE_ENABLED

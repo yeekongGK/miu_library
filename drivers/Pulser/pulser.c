@@ -23,6 +23,7 @@
 
 #include "common.h"
 #include "pulser.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 PULSER_t *pConfig;
 
@@ -344,3 +345,5 @@ uint8_t PULSER_TaskState(void)
 {
 	return PULSER_GetTaskState();
 }
+
+#endif // DRIVERS_MODULE_ENABLED

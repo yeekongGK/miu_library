@@ -25,6 +25,7 @@
 
 #include "common.h"
 #include "digitalsensor.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 __IO ITStatus DIGISENSOR_PBMag_Interrupt= RESET;
 __IO ITStatus DIGISENSOR_TamperIn_Interrupt= RESET;
@@ -259,3 +260,5 @@ uint8_t DIGISENSOR_TaskState(void)
 {
 	return false;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

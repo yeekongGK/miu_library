@@ -21,6 +21,7 @@
 
 #ifndef SENSOR_BATTERYSENSOR_H_
 #define SENSOR_BATTERYSENSOR_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 
@@ -58,4 +59,5 @@ void BATTSENSOR_Init(SENSOR_t *_config);
 void BATTSENSOR_Task(void);
 uint8_t BATTSENSOR_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* SENSOR_BATTERYSENSOR_H_ */

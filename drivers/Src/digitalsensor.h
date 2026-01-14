@@ -21,6 +21,7 @@
 
 #ifndef SENSOR_DIGITALSENSOR_H_
 #define SENSOR_DIGITALSENSOR_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 
@@ -51,4 +52,5 @@ void DIGISENSOR_Init(void);
 void DIGISENSOR_Task(void);
 uint8_t DIGISENSOR_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* SENSOR_DIGITALSENSOR_H_ */

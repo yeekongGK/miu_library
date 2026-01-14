@@ -8,6 +8,7 @@
 #include "common.h"
 #include "lwobject.h"
 #include "sensor.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 
@@ -133,3 +134,5 @@ uint8_t LWOBJ_TaskState(void)
 {
 	return SLEEP_TaskState;
 }
+
+#endif // NETWORK_MODULE_ENABLED

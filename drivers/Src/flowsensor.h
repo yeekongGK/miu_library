@@ -21,6 +21,7 @@
 
 #ifndef SENSOR_FLOWSENSOR_H_
 #define SENSOR_FLOWSENSOR_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 #include "pulser.h"
@@ -106,4 +107,5 @@ void FLOWSENSOR_Init(FLOWSENSOR_t *_config);
 void FLOWSENSOR_Task(void);
 uint8_t FLOWSENSOR_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* SENSOR_FLOWSENSOR_H_ */

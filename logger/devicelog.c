@@ -34,6 +34,7 @@
 #include "rtc.h"
 #include "rtcalarm.h"
 #include <time.h>
+#ifdef LOGGER_MODULE_ENABLED
 
 static void DEVICELOG_Construct(DEVICELOG_Log_t *_log);
 static void DEVICELOG_PeriodicLogTask(void);
@@ -500,3 +501,5 @@ uint8_t DEVICELOG_TaskState(void)
 
 	return SLEEP_TaskState;
 }
+
+#endif // LOGGER_MODULE_ENABLED

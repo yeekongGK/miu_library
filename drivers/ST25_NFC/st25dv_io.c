@@ -7,6 +7,7 @@
 #include <i2c.h>
 #include "st25dv.h"
 #include "st25dv_io.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 NFCTAG_Status_t ST25DV_IO_ConvertHALStatus( const HAL_StatusTypeDef status )
 {
@@ -103,3 +104,5 @@ NFCTAG_Status_t ST25DV_IO_IsDeviceReady( const uint8_t DevAddr, const uint32_t T
 {
   return  ST25DV_IO_ConvertHALStatus(I2C1_IsDeviceReady(DevAddr, Trials, ST25DV_I2C_TIMEOUT ));
 }
+
+#endif // DRIVERS_MODULE_ENABLED

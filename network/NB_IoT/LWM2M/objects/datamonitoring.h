@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_LWM2M_OBJECT_DATAMONITORING_H_
 #define NBIOT_LWM2M_OBJECT_DATAMONITORING_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 #include "lwresource.h"
@@ -138,4 +139,5 @@ typedef struct
 
 extern const char *const *const DTMON_TEXT[];
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_LWM2M_OBJECT_DATAMONITORING_H_ */

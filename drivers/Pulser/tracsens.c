@@ -25,6 +25,7 @@
 #include "common.h"
 #include "tracsens.h"
 #include "lptim1.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 static TRACSENS_t *pConfig;
 static PULSER_CounterMode_t eMode= NORMAL_CounterMode;
@@ -346,3 +347,5 @@ void TRACSENS_ClearError(void)
 	config.pulser.rtePrevErrorPatternCount= pConfig->rteErrorPatternCount;
 }
 
+
+#endif // DRIVERS_MODULE_ENABLED

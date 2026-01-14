@@ -24,6 +24,7 @@
 
 #ifndef INC_SYS_H_
 #define INC_SYS_H_
+#ifdef SYSTEM_MODULE_ENABLED
 
 #include "rtc.h"
 #include "main.h"
@@ -237,4 +238,5 @@ uint32_t SYS_GetTaskSleepStatusBitmap(void);
 void SYS_Init(void);
 void SYS_Task(void);
 
+#endif // SYSTEM_MODULE_ENABLED
 #endif /* INC_SYS_H_ */

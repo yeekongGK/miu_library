@@ -30,6 +30,7 @@
 
 /* Includes ------------------------------------------------------------------*/
 #include "st25dv.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 
 /** @addtogroup BSP
@@ -2265,3 +2266,5 @@ NFCTAG_Status_t ST25DV_i2c_ReadMBLength_Dyn( uint8_t * const pMBLength )
 
 
 /******************* (C) COPYRIGHT 2016 STMicroelectronics *****END OF FILE****/
+
+#endif // DRIVERS_MODULE_ENABLED

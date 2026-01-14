@@ -27,6 +27,7 @@
 #include "cfg.h"
 #include "ioctrl.h"
 #include "pulser.h"
+#ifdef IOCTRL_MODULE_ENABLED
 
 void IOCTRL_MainPower_Init(bool _enable)
 {
@@ -385,3 +386,5 @@ uint8_t IOCTRL_TaskState(void)
 
 
 
+
+#endif // IOCTRL_MODULE_ENABLED

@@ -20,6 +20,7 @@
  ******************************************************************************/
 #include "common.h"
 #include "lptim1.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 void LPTIM1_NoCallback(void);
 
@@ -52,3 +53,5 @@ void LPTIM1_SetCounterChangedToDownCallback(void *_callback)
 {
 	LPTIM1_CounterChangedToDownCallback= _callback;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

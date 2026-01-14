@@ -760,6 +760,7 @@ uECC_VLI_API void uECC_vli_modInv(uECC_word_t *result,
 /* ------ Point operations ------ */
 
 #include "curve-specific.inc"
+#ifdef SECURITY_MODULE_ENABLED
 
 /* Returns 1 if 'point' is the point at infinity, 0 otherwise. */
 #define EccPoint_isZero(point, curve) uECC_vli_isZero((point), (curve)->num_words * 2)
@@ -1656,3 +1657,5 @@ void uECC_point_mult(uECC_word_t *result,
 }
 
 #endif /* uECC_ENABLE_VLI_API */
+
+#endif // SECURITY_MODULE_ENABLED

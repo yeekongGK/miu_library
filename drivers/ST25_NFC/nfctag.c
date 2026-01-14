@@ -22,6 +22,7 @@
 #include "diag.h"
 #include "sys.h"
 #include "utili.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 #define DBG_Print(...)
 
@@ -595,3 +596,5 @@ uint8_t NFCTAG_TaskState(void)
 {
 	return false;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

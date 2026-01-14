@@ -20,9 +20,13 @@
 #ifndef INC_CFG_DEVICE_H_
 #define INC_CFG_DEVICE_H_
 
+#ifdef CONFIG_MODULE_ENABLED
+
 //#define CFG_DEVICE_FIRMWARE_VERSION		    FIRMWARE_VERSION
 #define CFG_DEVICE_FIRMWARE_VERSION		    "v2_testing"
 #define CFG_DEVICE_HARDWARE_VERSION 		"NB-MAIN-01U1"
 #define CFG_DEVICE_USE_RADIO_SW				0/*only for a couple of initial prototype boards that has radio switch configuration*/
+
+#endif // CONFIG_MODULE_ENABLED
 
 #endif /* INC_CFG_DEVICE_H_ */

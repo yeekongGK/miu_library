@@ -23,6 +23,7 @@
 
 #ifndef LOGGER_LOGGER_H_
 #define LOGGER_LOGGER_H_
+#ifdef LOGGER_MODULE_ENABLED
 
 #include "main.h"
 #include "rtc.h"
@@ -142,4 +143,5 @@ void LOGGER_Init(LOG_t *_config);
 void LOGGER_Task(void);
 uint8_t LOGGER_TaskState(void);
 
+#endif // LOGGER_MODULE_ENABLED
 #endif /* LOGGER_LOGGER_H_ */

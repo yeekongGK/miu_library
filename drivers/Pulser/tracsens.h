@@ -21,6 +21,7 @@
 
 #ifndef PULSECNTR_TRACSENS_H_
 #define PULSECNTR_TRACSENS_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 
@@ -63,4 +64,5 @@ uint8_t TRACSENS_GetDirection(void);
 bool TRACSENS_ErrorDetected(void);
 void TRACSENS_ClearError(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* PULSECNTR_TRACSENS_H_ */

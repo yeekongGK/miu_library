@@ -28,6 +28,7 @@
 #include "lcsens.h"
 #include "lptim1.h"
 #include "lptim2.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 #pragma GCC push_options
 #pragma GCC optimize ("O0")
@@ -713,3 +714,5 @@ uint8_t LCSENS_TaskState(void)
 }
 
 #pragma GCC pop_options
+
+#endif // DRIVERS_MODULE_ENABLED

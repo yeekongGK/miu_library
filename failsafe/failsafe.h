@@ -21,6 +21,7 @@
 
 #ifndef FAILSAFE_FAILSAFE_H_
 #define FAILSAFE_FAILSAFE_H_
+#ifdef FAILSAFE_MODULE_ENABLED
 
 #include "main.h"
 //#include "rtcalarm.h"
@@ -116,4 +117,5 @@ void FAILSAFE_Init(FAILSAFE_t *_config);
 void FAILSAFE_Task(void);
 uint8_t FAILSAFE_TaskState(void);
 
+#endif // FAILSAFE_MODULE_ENABLED
 #endif /* FAILSAFE_FAILSAFE_H_ */

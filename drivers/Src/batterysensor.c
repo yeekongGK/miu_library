@@ -26,6 +26,7 @@
 #include "common.h"
 #include "batterysensor.h"
 #include "max17260.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 SENSOR_t *pConfig_SENS;
 
@@ -503,3 +504,5 @@ uint8_t BATTSENSOR_TaskState(void)
 {
 	return MAX17260_TaskState();
 }
+
+#endif // DRIVERS_MODULE_ENABLED

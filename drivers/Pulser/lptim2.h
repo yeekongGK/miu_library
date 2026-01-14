@@ -20,6 +20,7 @@
 
 #ifndef INC_LPTIM2_H_
 #define INC_LPTIM2_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 
@@ -28,4 +29,5 @@ void LPTIM2_SetAutoReloadMatchCallback(void *);
 void LPTIM2_SetCounterChangedToUpCallback(void *);
 void LPTIM2_SetCounterChangedToDownCallback(void *);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* INC_LPTIM2_H_ */

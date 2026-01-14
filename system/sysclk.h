@@ -20,6 +20,7 @@
 
 #ifndef SYSTEM_SYSCLK_H_
 #define SYSTEM_SYSCLK_H_
+#ifdef SYSTEM_MODULE_ENABLED
 
 #include "main.h"
 
@@ -38,4 +39,5 @@ uint64_t SYSCLK_GetTimestamp_ms(void);
 uint32_t SYSCLK_GetTimestamp_s(void);
 void SYSCLK_SyncTick(void);
 
+#endif // SYSTEM_MODULE_ENABLED
 #endif /* SYSTEM_SYSCLK_H_ */

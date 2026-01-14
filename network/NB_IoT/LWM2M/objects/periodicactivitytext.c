@@ -7,6 +7,7 @@
 
 #include "common.h"
 #include "periodicactivity.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 const char *const *const PRACT_TEXT[]=
 {
@@ -64,3 +65,5 @@ const char *const *const PRACT_TEXT[]=
 };
 
 
+
+#endif // NETWORK_MODULE_ENABLED

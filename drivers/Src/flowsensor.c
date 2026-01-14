@@ -22,6 +22,7 @@
 #include "common.h"
 #include "flowsensor.h"
 #include "pulser.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 static void FLOWSENSOR_SetTimeout_s(uint32_t _s);
 static bool FLOWSENSOR_IsTimeout(void);
@@ -435,3 +436,5 @@ uint8_t FLOWSENSOR_TaskState(void)
 {
 	return SLEEP_TaskState;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

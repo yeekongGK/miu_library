@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_LWM2M_OBJECTS_SOFTWAREMGT_H_
 #define NBIOT_LWM2M_OBJECTS_SOFTWAREMGT_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 #include "lwresource.h"
@@ -126,4 +127,5 @@ typedef struct
 	char packageversion[SWMGT_CFG_URI_MAX_LEN];
 }SWMGT_ResourceHolder_t;
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_LWM2M_OBJECTS_SOFTWAREMGT_H_ */

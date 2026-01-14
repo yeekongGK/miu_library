@@ -20,6 +20,7 @@
 
 #ifndef SECURE_SECURITY_H_
 #define SECURE_SECURITY_H_
+#ifdef SECURITY_MODULE_ENABLED
 
 #include "main.h"
 
@@ -31,4 +32,5 @@ void SECURE_CBC_Encrypt(uint8_t *_iv, uint8_t *_buffer, uint32_t _bufferLen);
 void SECURE_CBC_Decrypt(uint8_t *_iv, uint8_t *_buffer, uint32_t _bufferLen);
 void SECURE_CTR_Transcrypt(uint8_t _keyNo, uint8_t *_iv, uint8_t *_buffer, uint32_t _bufferLen);
 
+#endif // SECURITY_MODULE_ENABLED
 #endif /* SECURE_SECURITY_H_ */

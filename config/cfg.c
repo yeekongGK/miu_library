@@ -1,4 +1,4 @@
-/******************************************************************************
+#ifdef CONFIG_MODULE_ENABLED
  * File:        cfg.c
  * Author:      Firmware Team
  * Created:     05-10-2025
@@ -1533,3 +1533,4 @@ ErrorStatus CFG_Load(Config_t *_cfg)
 
 	return _status;
 }
+#endif // CONFIG_MODULE_ENABLED

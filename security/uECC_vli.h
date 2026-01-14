@@ -25,6 +25,7 @@
 
 #ifndef _UECC_VLI_H_
 #define _UECC_VLI_H_
+#ifdef SECURITY_MODULE_ENABLED
 
 #include "uECC.h"
 #include "types.h"
@@ -192,4 +193,5 @@ int uECC_generate_random_int(uECC_word_t *random,
 } /* end of extern "C" */
 #endif
 
+#endif // SECURITY_MODULE_ENABLED
 #endif /* _UECC_VLI_H_ */

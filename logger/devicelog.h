@@ -23,6 +23,7 @@
 
 #ifndef LOGGER_DEVICELOG_H_
 #define LOGGER_DEVICELOG_H_
+#ifdef LOGGER_MODULE_ENABLED
 
 #include "main.h"
 #include "m95m01.h"
@@ -108,4 +109,5 @@ void DEVICELOG_Init(void);
 void DEVICELOG_Task(void);
 uint8_t DEVICELOG_TaskState(void);
 
+#endif // LOGGER_MODULE_ENABLED
 #endif /* LOGGER_DEVICELOG_H_ */

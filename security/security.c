@@ -30,6 +30,7 @@
 #include "security.h"
 #include "aes.h"
 #include "uECC.h"
+#ifdef SECURITY_MODULE_ENABLED
 
 __IO static uint8_t pucV[4][16];
 
@@ -276,3 +277,5 @@ ErrorStatus SECURE_ECDH_GenerateKeyPair(uint8_t *_publicKey64B)
 //	  return error_status;
 //}
 
+
+#endif // SECURITY_MODULE_ENABLED

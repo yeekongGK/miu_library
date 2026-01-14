@@ -8,6 +8,7 @@
 #include <math.h>
 #include "main.h"
 #include "nfctag.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 static uint32_t uwNDEFLockTimeoutValue= 0;
 
@@ -172,3 +173,5 @@ NFCTAG_Status_t NFCTAG_NDEF_Clear(void)
 //
 //	return true;
 //}
+
+#endif // DRIVERS_MODULE_ENABLED

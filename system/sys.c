@@ -39,6 +39,7 @@
 #include "ioctrl.h"
 #include "security.h"
 #include "../alarm/alarm.h"
+#ifdef SYSTEM_MODULE_ENABLED
 
 SYS_TaskInfo_t pSYS_TaskInfo[MAX_TaskId];
 bool bKeepSleep= true;
@@ -964,3 +965,5 @@ const char* SYS_GetTaskIdName(SYS_TaskId_t _taskId)
 			 break;
 	 }
 }
+
+#endif // SYSTEM_MODULE_ENABLED

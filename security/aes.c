@@ -30,6 +30,7 @@
 #include <stdint.h>
 #include <string.h> // CBC mode, for memset
 #include "aes.h"
+#ifdef SECURITY_MODULE_ENABLED
 
 /*****************************************************************************/
 /* Defines:                                                                  */
@@ -560,3 +561,5 @@ void AES_CTR_xcrypt_buffer(struct AES_ctx* ctx, uint8_t* buf, uint32_t length)
 
 #endif // #if defined(CTR) && (CTR == 1)
 
+
+#endif // SECURITY_MODULE_ENABLED

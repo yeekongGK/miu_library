@@ -7,6 +7,7 @@
 
 #ifndef LOGGER_RADIOLOG_H_
 #define LOGGER_RADIOLOG_H_
+#ifdef LOGGER_MODULE_ENABLED
 
 #include "main.h"
 
@@ -63,4 +64,5 @@ typedef struct
 	uint8_t thpMacDl[2];
 } RADIOLOG_Log_t;
 
+#endif // LOGGER_MODULE_ENABLED
 #endif /* LOGGER_RADIOLOG_H_ */

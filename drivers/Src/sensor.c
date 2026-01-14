@@ -32,6 +32,7 @@
 #include "bc66handler.h"
 #include "nfctag.h"
 #include "m95m01.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 static SENSOR_t *pConfig;
 
@@ -511,3 +512,5 @@ uint8_t SENSOR_TaskState(void)
 			| FLOWSENSOR_TaskState()
 			);
 }
+
+#endif // DRIVERS_MODULE_ENABLED

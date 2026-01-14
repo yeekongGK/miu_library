@@ -13,6 +13,7 @@
 #include "utili.h"
 #include "batterysensor.h"
 #include "security.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 
@@ -3266,3 +3267,5 @@ uint8_t BC66LINK_TaskState(void)
 	return (_taskState| BC66PHY_TaskState());
 }
 
+
+#endif // NETWORK_MODULE_ENABLED

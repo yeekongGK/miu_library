@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_LWM2M_OBJECTS_EVENTDATADELIVERY_H_
 #define NBIOT_LWM2M_OBJECTS_EVENTDATADELIVERY_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 #include "lwresource.h"
@@ -66,4 +67,5 @@ typedef struct
 	EDD_Rte_t rte;
 }EDD_ResourceHolder_t;
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_LWM2M_OBJECTS_EVENTDATADELIVERY_H_ */

@@ -10,6 +10,7 @@
 #include "cbor.h"
 #include "lwobject.h"
 #include "eventdatadelivery.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 
@@ -192,3 +193,5 @@ time_t EDD_Task(LWOBJ_Obj_t *pLwObj, time_t _currTime, uint64_t _currMask)
 
 	return _awakeTime;
 }
+
+#endif // NETWORK_MODULE_ENABLED

@@ -23,6 +23,7 @@
 #include "common.h"
 #include "internalsensor.h"
 #include "mcuadc.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 static void INTSENSOR_Voltage_Detect(void);
 
@@ -114,3 +115,5 @@ uint8_t INTSENSOR_TaskState(void)
 {
 	return MCUADC_TaskState();
 }
+
+#endif // DRIVERS_MODULE_ENABLED

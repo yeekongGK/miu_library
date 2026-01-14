@@ -25,6 +25,7 @@
 #include "common.h"
 #include "m95m01.h"
 #include "spi1.h"
+#ifdef LOGGER_MODULE_ENABLED
 
 static void M95M01_CSPin(uint8_t _level);
 static void M95M01_SetTimeout(uint32_t _ms);
@@ -778,3 +779,5 @@ uint8_t M95M01_TransactionState(void)
     return RUN_TaskState;
 }
 
+
+#endif // LOGGER_MODULE_ENABLED

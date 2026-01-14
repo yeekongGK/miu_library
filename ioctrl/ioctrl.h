@@ -21,6 +21,7 @@
 
 #ifndef SRC_IOCTRL_IOCTRL_H_
 #define SRC_IOCTRL_IOCTRL_H_
+#ifdef IOCTRL_MODULE_ENABLED
 
 #include "main.h"
 
@@ -56,4 +57,5 @@ void IOCTRL_Init(void);
 void IOCTRL_Task(void);
 uint8_t IOCTRL_TaskState(void);
 
+#endif // IOCTRL_MODULE_ENABLED
 #endif /* SRC_IOCTRL_IOCTRL_H_ */

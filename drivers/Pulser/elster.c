@@ -23,6 +23,7 @@
 #include "common.h"
 #include "elster.h"
 #include "lptim1.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 extern void (*fpAutoReloadMatchCallback)(void);
 
@@ -196,3 +197,5 @@ uint8_t ELSTER_GetDirection(void)
 {
 	return (true== bIsBackward)? BACKWARD_CounterDirection: FORWARD_CounterDirection;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

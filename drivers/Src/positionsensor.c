@@ -25,6 +25,7 @@
 #include "common.h"
 #include "positionsensor.h"
 #include "lis2dh12.h"
+#ifdef DRIVERS_MODULE_ENABLED
 
 __IO ITStatus POSSENSOR_Tilt_Interrupt= RESET;
 static uint32_t POSSENSOR_Tilt_Counter= 0;
@@ -236,3 +237,5 @@ uint8_t POSSENSOR_TaskState(void)
 	}
 	return false;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

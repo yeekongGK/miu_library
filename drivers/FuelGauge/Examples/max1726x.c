@@ -1,3 +1,4 @@
+#ifdef DRIVERS_MODULE_ENABLED
 /******************************************************************************
  * File:        max1726x.c
  * Author:      Firmware Team
@@ -114,3 +115,5 @@ int main(void)
   }
   /* USER CODE END 3 */
 }
+
+#endif // DRIVERS_MODULE_ENABLED

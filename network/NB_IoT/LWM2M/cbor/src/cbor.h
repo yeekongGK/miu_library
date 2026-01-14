@@ -115,6 +115,7 @@
 
 #ifndef CBOR_H
 #define CBOR_H
+#ifdef NETWORK_MODULE_ENABLED
 
 #include <stdbool.h>
 #include <stdint.h>
@@ -706,6 +707,7 @@ bool cbor_at_end(const cbor_stream_t *stream, size_t offset);
 }
 #endif
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* CBOR_H */
 
 /** @} */

@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_NBIOT_DEFINE_H_
 #define NBIOT_NBIOT_DEFINE_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 typedef struct
 {
@@ -72,4 +73,5 @@ typedef struct
 #define DTMON_CFG_RESULTS_CBOR_BYTE_LEN				(1/*array header*/+ 1+sizeof(uint32_t)+ 1+sizeof(uint32_t) + 1+sizeof(uint32_t))
 #define DTMON_CFG_SETTINGS_RESOURCE_MAX_LEN			96
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_NBIOT_DEFINE_H_ */

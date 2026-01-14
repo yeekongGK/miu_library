@@ -14,6 +14,7 @@
 #include "periodicactivity.h"
 #include "datamonitoring.h"
 #include "softwaremgt.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 
@@ -1161,3 +1162,5 @@ uint8_t LWM2M_TaskState(void)
 {
 	return (BC66LINK_TaskState()| LWOBJ_TaskState());
 }
+
+#endif // NETWORK_MODULE_ENABLED

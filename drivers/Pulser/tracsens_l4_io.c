@@ -35,6 +35,7 @@
 
 #include <tracsens_u0_io.h>
 #include "main.h" // For STM32 HAL/LL drivers
+#ifdef DRIVERS_MODULE_ENABLED
 
 // A static pointer to hold the injected LPTIM handle
 static LPTIM_HandleTypeDef *pLptimHandle = NULL;
@@ -171,3 +172,5 @@ static void LPTIM1_CounterChangedToDownCallback(LPTIM_HandleTypeDef *hlptim)
         App_DirDownCallback();
     }
 }
+
+#endif // DRIVERS_MODULE_ENABLED

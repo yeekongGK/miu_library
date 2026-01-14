@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_GKCOAP_GKCOAPPACKET_H_
 #define NBIOT_GKCOAP_GKCOAPPACKET_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 
@@ -19,4 +20,5 @@ uint16_t GKCOAPPKT_PopulateFotaPacket(uint8_t _type, uint32_t _currPacket, char 
 uint16_t GKCOAPPKT_PopulateMsgPacket(uint8_t *_payloadBuf, uint8_t *_msg, uint16_t _msgLen);
 ErrorStatus GKCOAPPKT_ProcessDownlinkPacket(uint8_t *_rxBuffer, uint32_t _rxLen);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_GKCOAP_GKCOAPPACKET_H_ */

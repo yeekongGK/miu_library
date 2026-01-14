@@ -9,6 +9,7 @@
 #include "bc66handler.h"
 #include "bc66link.h"
 #include "bc66phy.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 
@@ -747,3 +748,5 @@ void BC66HANDLER_ClearUnintentionalResetFlag(void)
 {
 	bUnintentionalResetDetected= false;
 }
+
+#endif // NETWORK_MODULE_ENABLED

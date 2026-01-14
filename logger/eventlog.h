@@ -18,7 +18,9 @@
 
 #ifndef LOGGER_EVENTLOG_H_
 #define LOGGER_EVENTLOG_H_
+#ifdef LOGGER_MODULE_ENABLED
 
 
 
+#endif // LOGGER_MODULE_ENABLED
 #endif /* LOGGER_EVENTLOG_H_ */

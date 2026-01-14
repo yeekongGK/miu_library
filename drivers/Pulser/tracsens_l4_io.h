@@ -29,6 +29,7 @@
 
 #ifndef TRACSENS_IO_H
 #define TRACSENS_IO_H
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 #include <stdint.h>
@@ -83,5 +84,6 @@ TRACSENS_IO_Direction_t TRACSENS_IO_GetDirection(void);
 
 LPTIM_HandleTypeDef* TRACSENS_IO_GetHandle(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif // TRACSENS_IO_H
 

@@ -7,6 +7,7 @@
 
 #include <bc66util.h>
 #include "common.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 uint32_t BC66UTIL_EncodeLwM2MLifetime(uint32_t _lifetime_s)
 {
@@ -396,3 +397,5 @@ NOTE 4: The value is applicable only in NB-S1 mode. If received in WB-S1 mode it
 interpreted as 1101 by this version of the protocol.
 NOTE 5: The value is applicable only in WB-S1 mode. If receive
 */
+
+#endif // NETWORK_MODULE_ENABLED

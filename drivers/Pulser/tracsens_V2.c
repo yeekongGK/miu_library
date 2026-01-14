@@ -25,6 +25,7 @@
 #include <tracsens_u0_io.h> // Include the hardware abstraction
 #include <tracsens_V2.h>
 #include "main.h"        // For HAL_UART_Transmit, huart2
+#ifdef DRIVERS_MODULE_ENABLED
 
 /* ================================================================================= */
 /* PRIVATE MODULE VARIABLES                               */
@@ -185,3 +186,5 @@ static void TRACSENS_AutoReloadMatchCallback(void)
   UART_Printf("AutoReloadMatchCallback: Dir=%d, Multiplier=%ld, curr=%ld\r\n", eCounterDirection, lCntrMultiplier, current_value); // Optional: can be noisy
 
 }
+
+#endif // DRIVERS_MODULE_ENABLED

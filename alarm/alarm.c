@@ -24,6 +24,8 @@
 #include "sys.h"
 #include "alarm.h"
 
+#ifdef ALARM_MODULE_ENABLED
+
 static ALARM_t *pConfig;
 static ALARM_AlarmObject_t *pAlarm;
 static SYS_TaskState_t eTaskState= SLEEP_TaskState;
@@ -267,3 +269,5 @@ uint8_t ALARM_TaskState(void)
 {
 	return eTaskState;
 }
+
+#endif // ALARM_MODULE_ENABLED

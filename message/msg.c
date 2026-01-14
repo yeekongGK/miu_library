@@ -26,6 +26,7 @@
 //#include "common.h"
 #include "msg.h"
 #include "logger.h"
+#ifdef MESSAGE_MODULE_ENABLED
 
 __IO static MSG_t		eMsgQueue[MSG_CFG_MAX_MSG_ARRAY];
 __IO static uint16_t 	ubMsgIndex= 0;
@@ -194,3 +195,5 @@ uint8_t MSG_TaskState(void)
 	}
 	return false;
 }
+
+#endif // MESSAGE_MODULE_ENABLED

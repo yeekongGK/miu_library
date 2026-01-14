@@ -24,6 +24,7 @@
 #include "syspwr.h"
 #include "ioctrl.h"
 #include "digitalsensor.h"
+#ifdef SYSTEM_MODULE_ENABLED
 
 void SYSPWR_InitGPIO(void)
 {
@@ -87,3 +88,5 @@ void SYSPWR_EnableModem(bool _enable)
 		IOCTRL_RadioPowerBypass_Enable(true);
 	}
 }
+
+#endif // SYSTEM_MODULE_ENABLED

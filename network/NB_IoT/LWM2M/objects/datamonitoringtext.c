@@ -7,6 +7,7 @@
 
 #include "common.h"
 #include "datamonitoring.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 const char *const *const DTMON_TEXT[]=
 {
@@ -42,3 +43,5 @@ const char *const *const DTMON_TEXT[]=
 
 
 
+
+#endif // NETWORK_MODULE_ENABLED

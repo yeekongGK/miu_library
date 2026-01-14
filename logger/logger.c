@@ -27,6 +27,7 @@
 #include "m95m01.h"
 #include "radiolog.h"
 #include "devicelog.h"
+#ifdef LOGGER_MODULE_ENABLED
 
 static void LOGGER_EndTransaction(bool _transactionStatusOK);
 
@@ -436,3 +437,5 @@ ErrorStatus LOGGER_Test(void)
 	DBG_Print("LOGGER_Test_SUCCESS. \r\n");
 	return SUCCESS;
 }
+
+#endif // LOGGER_MODULE_ENABLED

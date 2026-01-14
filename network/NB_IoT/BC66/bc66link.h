@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_BC66LINK_H_
 #define NBIOT_BC66LINK_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 
@@ -840,4 +841,5 @@ void BC66LINK_TurnOff(void);
 void BC66LINK_TurnOn(void);
 uint8_t BC66LINK_TaskState(void);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_BC66LINK_H_ */

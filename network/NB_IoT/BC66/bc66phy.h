@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_BC66_H_
 #define NBIOT_BC66_H_
+#ifdef NETWORK_MODULE_ENABLED
 
 #include "main.h"
 
@@ -152,4 +153,5 @@ void BC66PHY_ClearHardResetFlag(void);
 BC66PHY_Job_Status BC66PHY_GetJobStatus(void);
 uint8_t BC66PHY_TaskState(void);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_BC66PHY_H_ */

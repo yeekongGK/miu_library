@@ -23,6 +23,7 @@
 
 #ifndef PULSECNTR_PULSECNTR_H_
 #define PULSECNTR_PULSECNTR_H_
+#ifdef DRIVERS_MODULE_ENABLED
 
 #include "main.h"
 #include "tracsens.h"
@@ -108,4 +109,5 @@ void PULSER_Init(PULSER_t *_config);
 void PULSER_Task(void);
 uint8_t PULSER_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* PULSECNTR_PULSECNTR_H_ */

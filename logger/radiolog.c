@@ -1,3 +1,4 @@
+#ifdef LOGGER_MODULE_ENABLED
 /******************************************************************************
  * File:        radiolog.c
  * Author:      Firmware Team
@@ -15,3 +16,4 @@
  *   - Implement radio logging logic.
  *
  ******************************************************************************/
+#endif // LOGGER_MODULE_ENABLED

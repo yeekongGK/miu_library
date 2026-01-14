@@ -13,6 +13,7 @@
 #include "printf.h"
 #include "sensor.h"
 #include "msg.h"
+#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 
@@ -863,3 +864,5 @@ uint8_t GKCOAP_TaskState(void)
 {
 	return BC66LINK_TaskState();
 }
+
+#endif // NETWORK_MODULE_ENABLED
