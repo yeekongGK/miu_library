@@ -24,7 +24,7 @@
 
 #ifndef SENSOR_SENSOR_H_
 #define SENSOR_SENSOR_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "flowsensor.h"

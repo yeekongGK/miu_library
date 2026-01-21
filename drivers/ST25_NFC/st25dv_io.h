@@ -7,7 +7,7 @@
 
 #ifndef NFC_ST25DV_ST25DV_IO_H_
 #define NFC_ST25DV_ST25DV_IO_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "stdbool.h"
 #include "st25dv.h"

@@ -24,7 +24,7 @@
 //#include "common.h"
 #include "failsafe.h"
 //#include "batterysensor.h"
-#ifdef FAILSAFE_MODULE_ENABLED
+#if FAILSAFE_MODULE_ENABLED == ENABLE_MODULE
 
 static FAILSAFE_t *pConfig;
 uint32_t FAILSAFE_ulSWDGCounter= 0;

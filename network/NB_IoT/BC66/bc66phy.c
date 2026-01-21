@@ -4,13 +4,15 @@
  *  Created on: 30 Mar 2020
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <BC66/bc66phy.h>
 #include "common.h"
 #include "lpuart1.h"
 #include "ioctrl.h"
 #include "batterysensor.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 //#define DBG_PrintByte(x)
 

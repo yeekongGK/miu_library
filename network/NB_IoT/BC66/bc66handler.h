@@ -7,7 +7,7 @@
 
 #ifndef NBIOT_BC66HANDLER_H_
 #define NBIOT_BC66HANDLER_H_
-#ifdef NETWORK_MODULE_ENABLED
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "bc66link.h"

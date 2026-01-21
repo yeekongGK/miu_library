@@ -4,11 +4,13 @@
  *  Created on: 9 Mar 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "lwobject.h"
 #include "sensor.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 

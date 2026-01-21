@@ -23,7 +23,7 @@
 
 #ifndef PULSER_LCSENS_H_
 #define PULSER_LCSENS_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 

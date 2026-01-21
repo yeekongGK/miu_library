@@ -23,12 +23,14 @@
  *     documented.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "lcsens.h"
 #include "lptim1.h"
 #include "lptim2.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 #pragma GCC push_options
 #pragma GCC optimize ("O0")

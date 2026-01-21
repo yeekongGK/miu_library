@@ -23,7 +23,7 @@
 
 #ifndef MSG_MSG_H_
 #define MSG_MSG_H_
-#ifdef MESSAGE_MODULE_ENABLED
+#if MESSAGE_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "sys.h"

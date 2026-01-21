@@ -26,6 +26,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "devicelog.h"
 #include "m95m01.h"
@@ -34,7 +37,6 @@
 #include "rtc.h"
 #include "rtcalarm.h"
 #include <time.h>
-#ifdef LOGGER_MODULE_ENABLED
 
 static void DEVICELOG_Construct(DEVICELOG_Log_t *_log);
 static void DEVICELOG_PeriodicLogTask(void);

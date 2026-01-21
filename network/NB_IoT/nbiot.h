@@ -7,7 +7,7 @@
 
 #ifndef NBIOT_NBIOT_H_
 #define NBIOT_NBIOT_H_
-#ifdef NETWORK_MODULE_ENABLED
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "GKCOAP/gkcoap.h"

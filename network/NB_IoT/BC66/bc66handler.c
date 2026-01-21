@@ -4,12 +4,14 @@
  *  Created on: 6 Feb 2021
  *      Author: muhammad.ahamad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "bc66handler.h"
 #include "bc66link.h"
 #include "bc66phy.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 

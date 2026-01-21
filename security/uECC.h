@@ -24,7 +24,7 @@
 
 #ifndef _UECC_H_
 #define _UECC_H_
-#ifdef SECURITY_MODULE_ENABLED
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 

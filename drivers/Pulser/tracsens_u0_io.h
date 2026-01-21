@@ -30,7 +30,7 @@
 
 #ifndef TRACSENS_IO_H
 #define TRACSENS_IO_H
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 
 #include "main.h"

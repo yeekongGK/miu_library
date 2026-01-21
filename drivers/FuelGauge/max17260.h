@@ -21,7 +21,7 @@
  ******************************************************************************/
 #ifndef BATTERY_MONITOR_H
 #define BATTERY_MONITOR_H
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 #include <stdbool.h>

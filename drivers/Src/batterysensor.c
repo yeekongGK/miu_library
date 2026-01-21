@@ -22,11 +22,13 @@
  *     numbers that could be defined as named constants for clarity.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "batterysensor.h"
 #include "max17260.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 SENSOR_t *pConfig_SENS;
 

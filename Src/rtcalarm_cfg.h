@@ -21,6 +21,8 @@
 #ifndef RTCALARM_CFG_H_
 #define RTCALARM_CFG_H_
 
+#if RTCALARM_MODULE_ENABLED == ENABLE_MODULE
+
 #include "main.h"
 
 void RTCALARM_A_Callback(void);
@@ -30,5 +32,6 @@ void RTCALARM_A_Disable(void);
 void RTCALARM_A_Enable(RTC_TickType_t _tickType, RTC_AlarmStartMarker_t _alarmStartMarker);
 void RTCALARM_Init(void);
 
+#endif // RTCALARM_MODULE_ENABLED
 
 #endif /* RTC_RTCALARM_H_ */

@@ -25,12 +25,14 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "cfg.h"
 #include "security.h"
 #include "aes.h"
 #include "uECC.h"
-#ifdef SECURITY_MODULE_ENABLED
 
 __IO static uint8_t pucV[4][16];
 

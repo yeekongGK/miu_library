@@ -20,7 +20,7 @@
 
 #ifndef PULSER_ELSTER_H_
 #define PULSER_ELSTER_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 

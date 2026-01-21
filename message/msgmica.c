@@ -23,7 +23,7 @@
 
 #include "common.h"
 #include "msg.h"
-#ifdef MESSAGE_MODULE_ENABLED
+#if MESSAGE_MODULE_ENABLED == ENABLE_MODULE
 
 static ErrorStatus MSG_FLASH_ProcessTlvs(uint8_t *_TLVsBuffer, uint16_t _TLVsBufferLen, uint8_t *_respTLVsBuffer, uint16_t *_respTLVsBufferLen);
 static ErrorStatus MSG_INFO_READ_ProcessTlvs(uint8_t *_TLVsBuffer, uint16_t _TLVsBufferLen, uint8_t *_respTLVsBuffer, uint16_t *_respTLVsBufferLen);

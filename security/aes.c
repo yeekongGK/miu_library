@@ -30,7 +30,8 @@
 #include <stdint.h>
 #include <string.h> // CBC mode, for memset
 #include "aes.h"
-#ifdef SECURITY_MODULE_ENABLED
+
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 /*****************************************************************************/
 /* Defines:                                                                  */

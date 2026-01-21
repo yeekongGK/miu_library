@@ -3,6 +3,8 @@
 #ifndef _UECC_ASM_ARM_MULT_SQUARE_H_
 #define _UECC_ASM_ARM_MULT_SQUARE_H_
 
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 #define FAST_MULT_ASM_5                \
     "push {r3} \n\t"                   \
     "add r0, 12 \n\t"                  \
@@ -2307,5 +2309,7 @@
     "adcs r11, r11, r10 \n\t"               \
     "stmia r0!, {r8, r11} \n\t"             \
     "pop {r1, r2} \n\t"
+
+#endif // SECURITY_MODULE_ENABLED
 
 #endif /* _UECC_ASM_ARM_MULT_SQUARE_H_ */

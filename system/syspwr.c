@@ -21,10 +21,12 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
+
 #include "syspwr.h"
 #include "ioctrl.h"
 #include "digitalsensor.h"
-#ifdef SYSTEM_MODULE_ENABLED
 
 void SYSPWR_InitGPIO(void)
 {

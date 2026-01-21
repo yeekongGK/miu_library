@@ -23,10 +23,12 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if MESSAGE_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "msg.h"
 #include "logger.h"
-#ifdef MESSAGE_MODULE_ENABLED
 
 __IO static MSG_t		eMsgQueue[MSG_CFG_MAX_MSG_ARRAY];
 __IO static uint16_t 	ubMsgIndex= 0;

@@ -20,6 +20,9 @@
  *     be removed in a production build.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "sensor.h"
@@ -32,7 +35,6 @@
 #include "bc66handler.h"
 #include "nfctag.h"
 #include "m95m01.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 static SENSOR_t *pConfig;
 

@@ -22,6 +22,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "cfg.h"
 
@@ -39,7 +42,7 @@
 #include "ioctrl.h"
 #include "security.h"
 #include "../alarm/alarm.h"
-#ifdef SYSTEM_MODULE_ENABLED
+
 
 SYS_TaskInfo_t pSYS_TaskInfo[MAX_TaskId];
 bool bKeepSleep= true;

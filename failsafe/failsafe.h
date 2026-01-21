@@ -21,7 +21,7 @@
 
 #ifndef FAILSAFE_FAILSAFE_H_
 #define FAILSAFE_FAILSAFE_H_
-#ifdef FAILSAFE_MODULE_ENABLED
+#if FAILSAFE_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 //#include "rtcalarm.h"

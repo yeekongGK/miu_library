@@ -19,11 +19,13 @@
  *     and may require implementation.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "elster.h"
 #include "lptim1.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 extern void (*fpAutoReloadMatchCallback)(void);
 

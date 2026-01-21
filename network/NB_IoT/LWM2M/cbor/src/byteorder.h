@@ -18,7 +18,7 @@
 
 #ifndef BYTEORDER_H
 #define BYTEORDER_H
-#ifdef NETWORK_MODULE_ENABLED
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 

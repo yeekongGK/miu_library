@@ -21,7 +21,7 @@
 
 #ifndef SRC_IOCTRL_IOCTRL_H_
 #define SRC_IOCTRL_IOCTRL_H_
-#ifdef IOCTRL_MODULE_ENABLED
+#if IOCTRL_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 

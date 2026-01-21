@@ -20,11 +20,13 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "loggerutil.h"
 #include "rtc.h"
 #include "rtcalarm.h"
-#ifdef LOGGER_MODULE_ENABLED
 
 static uint8_t ucDevicePrevStatus= 0;
 static bool bIsTamperLog= false;

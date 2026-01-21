@@ -4,6 +4,9 @@
  *  Created on: 5 Jan 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <bc66handler.h>
 #include "common.h"
@@ -13,7 +16,6 @@
 #include "utili.h"
 #include "batterysensor.h"
 #include "security.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 
@@ -2464,8 +2466,8 @@ void BC66LINK_LWM2M_Configure(void *_param)
 //			if(false== _deviceObjectConfigured)
 //			{
 //				_deviceObjectConfigured= true;
-//				//BC66PHY_TxRxJob("AT+QLWCFG=”CR”,3,0,2,”PUB1234567”\r\n", 1, rx_OK, 5, 2);/*Change LwM2M Device Object's resource*/
-//				//BC66PHY_TxRxJob("AT+QLWCFG="device",”George Kent”,”NIUBV0L”,”BoardA.1”,”v1.C.N.abcdefg”,”QuectelFwVersion”,”Water Meter”\r\n", 1, rx_OK, 5, 2);/*Change LwM2M device object*/
+//				//BC66PHY_TxRxJob("AT+QLWCFG=ï¿½CRï¿½,3,0,2,ï¿½PUB1234567ï¿½\r\n", 1, rx_OK, 5, 2);/*Change LwM2M Device Object's resource*/
+//				//BC66PHY_TxRxJob("AT+QLWCFG="device",ï¿½George Kentï¿½,ï¿½NIUBV0Lï¿½,ï¿½BoardA.1ï¿½,ï¿½v1.C.N.abcdefgï¿½,ï¿½QuectelFwVersionï¿½,ï¿½Water Meterï¿½\r\n", 1, rx_OK, 5, 2);/*Change LwM2M device object*/
 //				//AT+QLWCFG="device"[,<manufacturer>,<model_no>,<hw_version>,<sw_version>,<fw_version>,<device_type>]
 //				sprintf((char *)pucTxBuffer, "AT+QLWCFG=\"CR\",3,0,0,\"George Kent(M) Berhad\";"
 //						"+QLWCFG=\"CR\",3,0,1,\"%s\";"

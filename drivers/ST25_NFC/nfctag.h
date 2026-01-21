@@ -7,7 +7,7 @@
 
 #ifndef NFC_NFCTAG_H_
 #define NFC_NFCTAG_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 #include "st25dv_io.h"

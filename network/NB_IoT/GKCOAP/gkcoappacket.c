@@ -4,6 +4,9 @@
  *  Created on: 14 Jun 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "gkcoappacket.h"
@@ -15,7 +18,6 @@
 #include "security.h"
 #include "pulser.h"
 #include "sensor.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 static uint8_t pucMsgBuffer[GKCOAPPKT_CFG_MSG_BUFFER_SIZE];
 

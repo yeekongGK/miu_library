@@ -24,7 +24,7 @@
 //#include "common.h"
 #include "syssleep.h"
 #include "sysclk.h"
-#ifdef SYSTEM_MODULE_ENABLED
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
 
 static void SYSSLEEP_SetMinSleepPeriod_ms(void);
 static void SYSSLEEP_SetSleepPeriod_ms(uint32_t _period_ms);

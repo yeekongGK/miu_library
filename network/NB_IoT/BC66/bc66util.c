@@ -4,10 +4,12 @@
  *  Created on: 7 Aug 2018
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <bc66util.h>
 #include "common.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 uint32_t BC66UTIL_EncodeLwM2MLifetime(uint32_t _lifetime_s)
 {

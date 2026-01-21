@@ -7,7 +7,7 @@
 
 #ifndef NBIOT_LWM2M_LWOBJECT_H_
 #define NBIOT_LWM2M_LWOBJECT_H_
-#ifdef NETWORK_MODULE_ENABLED
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "queue.h"

@@ -33,9 +33,11 @@
  *
  ******************************************************************************/
 
-#include <tracsens_u0_io.h>
 #include "main.h" // For STM32 HAL/LL drivers
-#ifdef DRIVERS_MODULE_ENABLED
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+#include <tracsens_u0_io.h>
 
 // A static pointer to hold the injected LPTIM handle
 static LPTIM_HandleTypeDef *pLptimHandle = NULL;

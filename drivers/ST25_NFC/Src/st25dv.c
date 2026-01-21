@@ -29,9 +29,11 @@
   */ 
 
 /* Includes ------------------------------------------------------------------*/
-#include "st25dv.h"
-#ifdef DRIVERS_MODULE_ENABLED
+#include "main.h"
 
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+#include "st25dv.h"
 
 /** @addtogroup BSP
   * @{

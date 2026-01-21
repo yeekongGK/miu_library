@@ -21,9 +21,11 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "sysclk.h"
-#ifdef SYSTEM_MODULE_ENABLED
 
 void (*SYSCLK_InitWakeupClock)(void)= NULL;
 

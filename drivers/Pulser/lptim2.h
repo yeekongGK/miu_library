@@ -20,7 +20,7 @@
 
 #ifndef INC_LPTIM2_H_
 #define INC_LPTIM2_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 

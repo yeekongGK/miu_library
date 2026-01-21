@@ -21,7 +21,7 @@
 #ifndef ALARM_ALARM_H_
 #define ALARM_ALARM_H_
 
-#ifdef ALARM_MODULE_ENABLED
+#if ALARM_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "sensor.h"

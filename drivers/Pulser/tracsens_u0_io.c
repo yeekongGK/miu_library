@@ -32,12 +32,14 @@
  *   - List pending improvements, refactors, or unimplemented parts if any.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #if defined(STM32U031xx)
 
 #include <tracsens_u0_io.h>
 #include "main.h" // For STM32 HAL/LL drivers
-#ifdef DRIVERS_MODULE_ENABLED
 
 // A static pointer to hold the injected LPTIM handle
 static LPTIM_HandleTypeDef *pLptimHandle = NULL;

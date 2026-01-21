@@ -18,9 +18,12 @@
  *   - -
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "lptim1.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 void LPTIM1_NoCallback(void);
 

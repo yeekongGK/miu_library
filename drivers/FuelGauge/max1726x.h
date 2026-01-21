@@ -23,7 +23,7 @@
 /* Define to prevent redundant inclusion */
 #ifndef _MAX1726X_H_
 #define _MAX1726X_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 /**** Includes ****/
 #include "stdint.h"

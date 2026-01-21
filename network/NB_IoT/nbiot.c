@@ -4,12 +4,14 @@
  *  Created on: 5 Feb 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "nbiot.h"
 #include "lwm2m.h"
 #include "gkcoap.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 static NBIOT_t *pConfig;
 static bool bGKCOAPTaskEnabled= false;

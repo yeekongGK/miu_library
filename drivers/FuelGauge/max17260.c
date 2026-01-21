@@ -21,10 +21,12 @@
  *   - -
  *
  ******************************************************************************/
-#include "max17260.h"
 #include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+#include "max17260.h"
 #include "i2c.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 // I2C Address for the MAX17260
 #define MAX17260_I2C_ADDRESS 0x36

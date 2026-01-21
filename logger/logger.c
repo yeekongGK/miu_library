@@ -22,12 +22,14 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "logger.h"
 #include "m95m01.h"
 #include "radiolog.h"
 #include "devicelog.h"
-#ifdef LOGGER_MODULE_ENABLED
 
 static void LOGGER_EndTransaction(bool _transactionStatusOK);
 

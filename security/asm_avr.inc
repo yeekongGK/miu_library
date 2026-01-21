@@ -3,6 +3,8 @@
 #ifndef _UECC_ASM_AVR_H_
 #define _UECC_ASM_AVR_H_
 
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 #if (uECC_SUPPORTS_secp256r1 || uECC_SUPPORTS_secp256k1)
     #define uECC_MIN_WORDS 32
 #endif
@@ -1085,5 +1087,7 @@ uECC_VLI_API void uECC_vli_square(uECC_word_t *result,
 }
 #define asm_square 1
 #endif /* uECC_SQUARE_FUNC && !asm_square */
+
+#endif // SECURITY_MODULE_ENABLED
 
 #endif /* _UECC_ASM_AVR_H_ */

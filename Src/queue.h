@@ -21,9 +21,10 @@
 #ifndef QUEUE_H_
 #define QUEUE_H_
 
-#include <stdint.h>
-#include <stddef.h>
-#include <string.h>
+#if QUEUE_MODULE_ENABLED == ENABLE_MODULE
+//#include <stdint.h>
+//#include <stddef.h>
+//#include <string.h>
 
 typedef struct
 {
@@ -39,5 +40,7 @@ void QUEUE_FIFO_Init(QUEUE_FIFO_t *_queue, uint8_t *_storage, uint16_t _elementS
 void QUEUE_FIFO_Push(QUEUE_FIFO_t *_queue, void *_element);
 void* QUEUE_FIFO_Pop(QUEUE_FIFO_t *_queue);
 uint16_t QUEUE_FIFO_UnPop(QUEUE_FIFO_t *_queue, uint16_t _backcount);
+
+#endif // QUEUE_MODULE_ENABLED
 
 #endif /* QUEUE_H_ */

@@ -23,7 +23,7 @@
 
 #ifndef _UECC_TYPES_H_
 #define _UECC_TYPES_H_
-#ifdef SECURITY_MODULE_ENABLED
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 #ifndef uECC_PLATFORM
     #if __AVR__

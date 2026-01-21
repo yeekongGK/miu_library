@@ -19,13 +19,15 @@
  *
  ******************************************************************************/
 
-#include <stdio.h>       // For vsnprintf
-#include <string.h>      // For strlen
-#include <stdarg.h>      // For va_list
+#include "main.h"        // For HAL_UART_Transmit, huart2
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+//#include <stdio.h>       // For vsnprintf
+//#include <string.h>      // For strlen
+//#include <stdarg.h>      // For va_list
 #include <tracsens_u0_io.h> // Include the hardware abstraction
 #include <tracsens_V2.h>
-#include "main.h"        // For HAL_UART_Transmit, huart2
-#ifdef DRIVERS_MODULE_ENABLED
 
 /* ================================================================================= */
 /* PRIVATE MODULE VARIABLES                               */

@@ -115,7 +115,7 @@
 
 #ifndef CBOR_H
 #define CBOR_H
-#ifdef NETWORK_MODULE_ENABLED
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdbool.h>
 #include <stdint.h>

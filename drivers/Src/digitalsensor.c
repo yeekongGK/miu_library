@@ -22,10 +22,12 @@
  *     more generic structure or function.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "digitalsensor.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 __IO ITStatus DIGISENSOR_PBMag_Interrupt= RESET;
 __IO ITStatus DIGISENSOR_TamperIn_Interrupt= RESET;

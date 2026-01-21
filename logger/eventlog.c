@@ -1,4 +1,4 @@
-#ifdef LOGGER_MODULE_ENABLED
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
 /******************************************************************************
  * File:        eventlog.c
  * Author:      Firmware Team

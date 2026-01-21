@@ -19,11 +19,13 @@
  *     commented out and should be reviewed or removed.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "internalsensor.h"
 #include "mcuadc.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 static void INTSENSOR_Voltage_Detect(void);
 

@@ -5,6 +5,10 @@
  *      Author: muhammad.ahmad@georgekent.net
  */
 
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "lwm2m.h"
 #include "cbor.h"
@@ -12,7 +16,6 @@
 #include "sensor.h"
 #include "periodicactivity.h"
 #include "msg.h"
-#ifdef NETWORK_MODULE_ENABLED
 
 #define DBG_Print
 

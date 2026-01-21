@@ -24,7 +24,8 @@
 
 #ifndef INC_SYS_H_
 #define INC_SYS_H_
-#ifdef SYSTEM_MODULE_ENABLED
+
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
 
 #include "rtc.h"
 #include "main.h"

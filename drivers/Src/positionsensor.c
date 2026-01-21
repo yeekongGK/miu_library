@@ -21,11 +21,13 @@
  *   - The calibration logic could be simplified for better clarity.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "positionsensor.h"
 #include "lis2dh12.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 __IO ITStatus POSSENSOR_Tilt_Interrupt= RESET;
 static uint32_t POSSENSOR_Tilt_Counter= 0;

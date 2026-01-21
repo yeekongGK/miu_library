@@ -21,11 +21,13 @@
  *   - The error handling logic could be further optimized for clarity.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "tracsens.h"
 #include "lptim1.h"
-#ifdef DRIVERS_MODULE_ENABLED
 
 static TRACSENS_t *pConfig;
 static PULSER_CounterMode_t eMode= NORMAL_CounterMode;

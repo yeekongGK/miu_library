@@ -25,10 +25,12 @@
  ******************************************************************************/
 
 /**** Includes ****/
-#include "max1726x.h"
 #include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+#include "max1726x.h"
 #include "i2c.h"
-#ifdef DRIVERS_MODULE_ENABLED
 /**** Globals ****/
 uint16_t max1726x_regs[256];
 uint16_t max1726x_serialnum[8];

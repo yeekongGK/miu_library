@@ -23,7 +23,7 @@
 
 #ifndef LOGGER_LOGGER_H_
 #define LOGGER_LOGGER_H_
-#ifdef LOGGER_MODULE_ENABLED
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "rtc.h"

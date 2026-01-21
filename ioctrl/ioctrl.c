@@ -22,12 +22,14 @@
  *
  ******************************************************************************/
 #include "main.h"
+
+#if IOCTRL_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "sys.h"
 #include "cfg.h"
 #include "ioctrl.h"
 #include "pulser.h"
-#ifdef IOCTRL_MODULE_ENABLED
 
 void IOCTRL_MainPower_Init(bool _enable)
 {

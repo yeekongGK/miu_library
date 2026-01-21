@@ -23,7 +23,7 @@
 
 #ifndef PULSECNTR_PULSECNTR_H_
 #define PULSECNTR_PULSECNTR_H_
-#ifdef DRIVERS_MODULE_ENABLED
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "tracsens.h"

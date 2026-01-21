@@ -21,7 +21,7 @@
 
 #ifndef SYSTEM_SYSSLEEP_H_
 #define SYSTEM_SYSSLEEP_H_
-#ifdef SYSTEM_MODULE_ENABLED
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "sys.h"

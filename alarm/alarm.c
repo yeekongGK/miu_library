@@ -20,11 +20,13 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if ALARM_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "sys.h"
 #include "alarm.h"
 
-#ifdef ALARM_MODULE_ENABLED
 
 static ALARM_t *pConfig;
 static ALARM_AlarmObject_t *pAlarm;
