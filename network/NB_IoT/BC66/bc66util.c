@@ -4,6 +4,9 @@
  *  Created on: 7 Aug 2018
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <bc66util.h>
 #include "common.h"
@@ -396,3 +399,5 @@ NOTE 4: The value is applicable only in NB-S1 mode. If received in WB-S1 mode it
 interpreted as 1101 by this version of the protocol.
 NOTE 5: The value is applicable only in WB-S1 mode. If receive
 */
+
+#endif // NETWORK_MODULE_ENABLED

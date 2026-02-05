@@ -22,6 +22,9 @@
  *     more generic structure or function.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "digitalsensor.h"
@@ -259,3 +262,5 @@ uint8_t DIGISENSOR_TaskState(void)
 {
 	return false;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

@@ -22,6 +22,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if RTC_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "rtc.h"
 #include "utili.h"
@@ -283,3 +286,5 @@ time_t time(time_t *_timep)
 
     return _t;
 }
+
+#endif // RTC_MODULE_ENABLED

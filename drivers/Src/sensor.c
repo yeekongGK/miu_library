@@ -20,6 +20,9 @@
  *     be removed in a production build.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "sensor.h"
@@ -511,3 +514,5 @@ uint8_t SENSOR_TaskState(void)
 			| FLOWSENSOR_TaskState()
 			);
 }
+
+#endif // DRIVERS_MODULE_ENABLED

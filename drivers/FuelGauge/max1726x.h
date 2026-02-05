@@ -23,6 +23,7 @@
 /* Define to prevent redundant inclusion */
 #ifndef _MAX1726X_H_
 #define _MAX1726X_H_
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 /**** Includes ****/
 #include "stdint.h"
@@ -444,4 +445,5 @@ void maxim_max1726x_lock_model_data(void);
  */
 uint8_t maxim_max1726x_verify_model_data_locked(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif //_MAX1726X_H_

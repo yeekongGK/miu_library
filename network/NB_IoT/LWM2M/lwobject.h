@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_LWM2M_LWOBJECT_H_
 #define NBIOT_LWM2M_LWOBJECT_H_
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "queue.h"
@@ -68,4 +69,5 @@ LWOBJ_ValueType_t LWOBJ_ReadResource(LWOBJ_ObjType_t _objType, uint16_t _resourc
 void LWOBJ_SEW_EVENT_Task(LWOBJ_Obj_t *pLwObj);
 LWOBJ_ValueType_t LWOBJ_ExecuteResource(LWOBJ_Obj_t *pLwObj, uint16_t _resourceId);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_LWM2M_LWOBJECT_H_ */

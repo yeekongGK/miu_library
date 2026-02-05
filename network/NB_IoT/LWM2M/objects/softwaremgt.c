@@ -5,6 +5,10 @@
  *      Author: muhammad.ahmad@georgekent.net
  */
 
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "lwm2m.h"
 #include "cbor.h"
@@ -643,3 +647,5 @@ time_t SWMGT_Task(LWOBJ_Obj_t *pLwObj, time_t _currTime, uint64_t _currMask)
 
 	return _awakeTime;
 }
+
+#endif // NETWORK_MODULE_ENABLED

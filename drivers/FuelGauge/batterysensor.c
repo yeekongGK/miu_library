@@ -22,6 +22,9 @@
  *     numbers that could be defined as named constants for clarity.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "batterysensor.h"
@@ -584,3 +587,5 @@ uint8_t BATTSENSOR_TaskState(void)
 {
 	return MAX17260_TaskState();
 }
+
+#endif // DRIVERS_MODULE_ENABLED

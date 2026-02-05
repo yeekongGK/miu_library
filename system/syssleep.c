@@ -24,6 +24,7 @@
 //#include "common.h"
 #include "syssleep.h"
 #include "sysclk.h"
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
 
 static void SYSSLEEP_SetMinSleepPeriod_ms(void);
 static void SYSSLEEP_SetSleepPeriod_ms(uint32_t _period_ms);
@@ -201,3 +202,5 @@ void SYSSLEEP_EnterDeepSleep(void)
     LL_LPM_EnableDeepSleep();  /* Set SLEEPDEEP bit of Cortex System Control Register */
     __WFI();/* Request Wait For Interrupt */
 }
+
+#endif // SYSTEM_MODULE_ENABLED

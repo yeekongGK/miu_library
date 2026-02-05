@@ -21,6 +21,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "sysclk.h"
 
@@ -207,3 +210,5 @@ void SYSCLK_SyncTick(void)
 }
 
 
+
+#endif // SYSTEM_MODULE_ENABLED

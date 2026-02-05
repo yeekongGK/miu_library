@@ -21,6 +21,7 @@
 
 #ifndef SYSTEM_SYSSLEEP_H_
 #define SYSTEM_SYSSLEEP_H_
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "sys.h"
@@ -39,4 +40,5 @@ void SYSSLEEP_Init(void);
 void SYSSLEEP_EnterLightSleep(void);
 void SYSSLEEP_EnterDeepSleep(void);
 
+#endif // SYSTEM_MODULE_ENABLED
 #endif /* SYSTEM_SYSSLEEP_H_ */

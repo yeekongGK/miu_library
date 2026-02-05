@@ -18,6 +18,9 @@
  *   - -
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "flowsensor.h"
@@ -435,3 +438,5 @@ uint8_t FLOWSENSOR_TaskState(void)
 {
 	return SLEEP_TaskState;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

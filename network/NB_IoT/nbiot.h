@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_NBIOT_H_
 #define NBIOT_NBIOT_H_
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "GKCOAP/gkcoap.h"
@@ -128,4 +129,5 @@ void NBIOT_Init(NBIOT_t *_config);
 void NBIOT_Task(void);
 uint8_t NBIOT_TaskState(void);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_NBIOT_H_ */

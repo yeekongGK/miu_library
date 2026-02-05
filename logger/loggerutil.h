@@ -19,6 +19,7 @@
 
 #ifndef LOGGER_LOGGERUTIL_H_
 #define LOGGER_LOGGERUTIL_H_
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 
@@ -30,4 +31,5 @@ void LOGGERUTIL_SetWaitForStartTickFlag(bool _wait);
 uint32_t LOGGERUTIL_GetStatusChangedLogCount(void);
 bool LOGGERUTIL_DeviceStatusChanged(void);
 
+#endif // LOGGER_MODULE_ENABLED
 #endif /* LOGGER_LOGGERUTIL_H_ */

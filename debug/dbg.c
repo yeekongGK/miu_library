@@ -14,6 +14,7 @@
 #include "main.h"
 #include "dbg.h"
 
+#if DEBUG_MODULE_ENABLED == ENABLE_MODULE
 /* Private typedef -----------------------------------------------------------*/
 
 /* Private define ------------------------------------------------------------*/
@@ -298,3 +299,5 @@ uint8_t __io_getcharNonBlocking(uint8_t *data)
 {
 	return 0;
 }
+
+#endif // DEBUG_MODULE_ENABLED

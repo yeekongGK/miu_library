@@ -21,6 +21,9 @@
 #ifndef UTILI_H_
 #define UTILI_H_
 
+
+#if UTILI_MODULE_ENABLED == 1
+
 #include "main.h"
 #include <time.h>
 
@@ -118,5 +121,7 @@ time_t UTILI_Mask_GetMatchedTimeFromNow(uint64_t _mask);
 time_t UTILI_ComputeNextTime(time_t _currTime, time_t _referenceTime, time_t _interval);
 time_t UTILI_GetSmallerTime(time_t _comparedTime, time_t _nextTime);
 time_t UTILI_GetSmallerPeriod(time_t _comparedPeriod, time_t _currTime, time_t _nextTime);
+
+#endif // UTILI_MODULE_ENABLED
 
 #endif /* UTILI_H_ */

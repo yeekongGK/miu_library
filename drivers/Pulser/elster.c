@@ -19,6 +19,9 @@
  *     and may require implementation.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "elster.h"
@@ -196,3 +199,5 @@ uint8_t ELSTER_GetDirection(void)
 {
 	return (true== bIsBackward)? BACKWARD_CounterDirection: FORWARD_CounterDirection;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

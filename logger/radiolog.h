@@ -7,6 +7,7 @@
 
 #ifndef LOGGER_RADIOLOG_H_
 #define LOGGER_RADIOLOG_H_
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 
@@ -32,7 +33,7 @@ typedef struct
 	uint8_t regPeriodicTAU;
 
 	/*27 bytes nuestats=radio info*/
-	uint8_t radSignalPower[2];/*rsrp*///from -140 dBm to – 44
+	uint8_t radSignalPower[2];/*rsrp*///from -140 dBm to ï¿½ 44
 	uint8_t radTotalPower[2];/*rssi*/
 	uint8_t radTxPower[2];
 	uint8_t radTxTime[4];
@@ -42,7 +43,7 @@ typedef struct
 	uint8_t radSnr[2];/*last snr*/
 	uint8_t radEarfcn[2];/*last earfcn*/
 	uint8_t radPci[2];/*last pci*/
-	uint8_t radRsrq[2];/*last rsrq*///RSRQ is defined from -3…-19.5dB
+	uint8_t radRsrq[2];/*last rsrq*///RSRQ is defined from -3ï¿½-19.5dB
 
 	/*16   bytes nuestats=bler info*/
 //	uint8_t blerRlcUl; tak cukup one byte but this always retyrned 0
@@ -63,4 +64,5 @@ typedef struct
 	uint8_t thpMacDl[2];
 } RADIOLOG_Log_t;
 
+#endif // LOGGER_MODULE_ENABLED
 #endif /* LOGGER_RADIOLOG_H_ */

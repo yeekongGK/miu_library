@@ -26,6 +26,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "devicelog.h"
 #include "m95m01.h"
@@ -500,3 +503,5 @@ uint8_t DEVICELOG_TaskState(void)
 
 	return SLEEP_TaskState;
 }
+
+#endif // LOGGER_MODULE_ENABLED

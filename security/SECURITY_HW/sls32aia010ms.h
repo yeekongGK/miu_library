@@ -21,6 +21,7 @@
 
 #ifndef SECURITY_SLS32AIA010MS_H_
 #define SECURITY_SLS32AIA010MS_H_
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 
@@ -31,4 +32,5 @@
 
 void SLS32AIA_Init(void);
 
+#endif // SECURITY_MODULE_ENABLED
 #endif /* SECURITY_SLS32AIA010MS_H_ */

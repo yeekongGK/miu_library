@@ -4,6 +4,9 @@
  *  Created on: 14 Jun 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "gkcoappacket.h"
@@ -677,3 +680,5 @@ ErrorStatus GKCOAPPKT_ProcessDownlinkPacket(uint8_t *_rxBuffer, uint32_t _rxLen)
 
 	return SUCCESS;
 }
+
+#endif // NETWORK_MODULE_ENABLED

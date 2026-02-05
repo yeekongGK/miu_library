@@ -20,6 +20,9 @@
  *     implemented or removed.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "pulser.h"
@@ -344,3 +347,5 @@ uint8_t PULSER_TaskState(void)
 {
 	return PULSER_GetTaskState();
 }
+
+#endif // DRIVERS_MODULE_ENABLED

@@ -21,6 +21,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if UTILI_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include <string.h>
 #include <math.h>
@@ -1012,3 +1015,4 @@ time_t UTILI_GetSmallerPeriod(time_t _comparedPeriod, time_t _currTime, time_t _
 	return (_diff< _comparedPeriod)? _diff: _comparedPeriod;
 }
 
+#endif // UTILI_MODULE_ENABLED

@@ -14,6 +14,8 @@
 #ifndef INC_DBG_H_
 #define INC_DBG_H_
 
+#if DEBUG_MODULE_ENABLED == ENABLE_MODULE
+
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 
@@ -61,5 +63,7 @@ void DBG_SNF_PutString(char *_string);
 void DBG_PrintNow(uint8_t *bytes, uint8_t len);
 
 void DBG_Channel_Printf(DBG_Channel_t channel, const char *format, ...);
+
+#endif // DEBUG_MODULE_ENABLED
 
 #endif /* INC_DBG_H_ */

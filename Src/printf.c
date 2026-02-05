@@ -20,6 +20,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if PRINT_MODULE_ENABLED == ENABLE_MODULE
+
 #include <stdbool.h>
 #include <stdint.h>
 
@@ -904,3 +907,5 @@ int fctprintf(void (*out)(char character, void* arg), void* arg, const char* for
   va_end(va);
   return ret;
 }
+
+#endif // PRINT_MODULE_ENABLED

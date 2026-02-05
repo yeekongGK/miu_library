@@ -10,6 +10,7 @@
 
 #ifndef NBIOT_BC66UTILITY_H_
 #define NBIOT_BC66UTILITY_H_
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 void BC66UTIL_EncodeCPSMS(uint8_t pucNbiotBuffer[], RTC_TickType_t _tickType, uint32_t _transmissionTick, uint16_t _activeTime/*seconds*/);
 uint8_t BC66UTIL_SecondsToGPRSTimer2(uint32_t _value);
@@ -21,4 +22,5 @@ uint32_t BC66UTIL_PagingTimeToMiliseconds(uint8_t _value);
 uint8_t BC66UTIL_MilisecondsToEDrx(uint32_t _value);
 uint32_t BC66UTIL_EDrxToMiliseconds(uint8_t _value);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_BC66UTILITY_H_ */

@@ -21,6 +21,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if SYSTEM_MODULE_ENABLED == ENABLE_MODULE
+
 #include "syspwr.h"
 #include "ioctrl.h"
 #include "digitalsensor.h"
@@ -87,3 +90,5 @@ void SYSPWR_EnableModem(bool _enable)
 		IOCTRL_RadioPowerBypass_Enable(true);
 	}
 }
+
+#endif // SYSTEM_MODULE_ENABLED

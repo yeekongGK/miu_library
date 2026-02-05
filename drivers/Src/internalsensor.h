@@ -20,6 +20,7 @@
 
 #ifndef SENSOR_INTERNALSENSOR_H_
 #define SENSOR_INTERNALSENSOR_H_
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 
@@ -37,4 +38,5 @@ void INTSENSOR_Init(void);
 void INTSENSOR_Task(void);
 uint8_t INTSENSOR_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* SENSOR_INTERNALSENSOR_H_ */

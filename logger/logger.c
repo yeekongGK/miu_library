@@ -22,6 +22,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "logger.h"
 #include "m95m01.h"
@@ -436,3 +439,5 @@ ErrorStatus LOGGER_Test(void)
 	DBG_Print("LOGGER_Test_SUCCESS. \r\n");
 	return SUCCESS;
 }
+
+#endif // LOGGER_MODULE_ENABLED

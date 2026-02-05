@@ -21,6 +21,9 @@
  *   - The error handling logic could be further optimized for clarity.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "tracsens.h"
@@ -346,3 +349,5 @@ void TRACSENS_ClearError(void)
 	config.pulser.rtePrevErrorPatternCount= pConfig->rteErrorPatternCount;
 }
 
+
+#endif // DRIVERS_MODULE_ENABLED

@@ -18,6 +18,7 @@
 
 #ifndef BYTEORDER_H
 #define BYTEORDER_H
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 
@@ -422,5 +423,6 @@ static inline uint64_t ntohll(uint64_t v)
 }
 #endif
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* BYTEORDER_H */
 /** @} */

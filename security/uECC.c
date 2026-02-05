@@ -24,6 +24,9 @@
 /* Copyright 2014, Kenneth MacKay. Licensed under the BSD 2-clause license. */
 
 #include "main.h"
+
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 #include "uECC.h"
 #include "uECC_vli.h"
 
@@ -760,6 +763,7 @@ uECC_VLI_API void uECC_vli_modInv(uECC_word_t *result,
 /* ------ Point operations ------ */
 
 #include "curve-specific.inc"
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 /* Returns 1 if 'point' is the point at infinity, 0 otherwise. */
 #define EccPoint_isZero(point, curve) uECC_vli_isZero((point), (curve)->num_words * 2)
@@ -1656,3 +1660,7 @@ void uECC_point_mult(uECC_word_t *result,
 }
 
 #endif /* uECC_ENABLE_VLI_API */
+
+#endif // SECURITY_MODULE_ENABLED
+
+#endif // SECURITY_MODULE_ENABLED

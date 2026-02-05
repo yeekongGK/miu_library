@@ -15,6 +15,7 @@
 
 #ifndef TRACSENS_H
 #define TRACSENS_H
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 
@@ -35,4 +36,5 @@ void TRACSENS_StartCounting(void);
  */
 void TRACSENS_DisplayInfo(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif // TRACSENS_H

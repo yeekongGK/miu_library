@@ -20,6 +20,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if RTCALARM_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "rtcalarm.h"
 
@@ -104,3 +107,5 @@ void RTCALARM_Init(void)
 {
 	RTC_Init();
 }
+
+#endif // RTCALARM_MODULE_ENABLED

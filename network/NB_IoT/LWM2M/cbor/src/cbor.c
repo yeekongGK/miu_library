@@ -26,6 +26,7 @@
 
 
 //#include "log.h"
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 #define DEBUG(M, ...) //log_debug( M, ##__VA_ARGS__)
 #undef printf
 #define printf(M, ...) //log_raw(M, ##__VA_ARGS__)
@@ -1087,3 +1088,5 @@ void cbor_stream_decode(cbor_stream_t *stream)
     puts("");
 }
 /* END: Printers */
+
+#endif // NETWORK_MODULE_ENABLED

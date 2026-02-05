@@ -25,8 +25,11 @@
  ******************************************************************************/
 
 /**** Includes ****/
-#include "max1726x.h"
 #include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+#include "max1726x.h"
 #include "i2c.h"
 /**** Globals ****/
 uint16_t max1726x_regs[256];
@@ -715,3 +718,5 @@ uint8_t maxim_max1726x_verify_model_data_locked(void)
 	return err_num;
 }
 
+
+#endif // DRIVERS_MODULE_ENABLED

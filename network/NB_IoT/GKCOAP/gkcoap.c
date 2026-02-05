@@ -4,6 +4,9 @@
  *  Created on: 14 Feb 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "gkcoap.h"
@@ -863,3 +866,5 @@ uint8_t GKCOAP_TaskState(void)
 {
 	return BC66LINK_TaskState();
 }
+
+#endif // NETWORK_MODULE_ENABLED

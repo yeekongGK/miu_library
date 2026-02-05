@@ -4,9 +4,12 @@
  *  Created on: 26 March 2019
  *      Author: muhammad.ahmad@georgekent.net
  */
-#include <string.h>
-#include <math.h>
 #include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+//#include <string.h>
+#include <math.h>
 #include "nfctag.h"
 
 static uint32_t uwNDEFLockTimeoutValue= 0;
@@ -172,3 +175,5 @@ NFCTAG_Status_t NFCTAG_NDEF_Clear(void)
 //
 //	return true;
 //}
+
+#endif // DRIVERS_MODULE_ENABLED

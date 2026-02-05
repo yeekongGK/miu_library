@@ -3,6 +3,8 @@
 #ifndef _UECC_ASM_ARM_MULT_SQUARE_H_
 #define _UECC_ASM_ARM_MULT_SQUARE_H_
 
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 #define FAST_MULT_ASM_5                     \
     "push   {r3} \n\t"                      \
     "ldmia  r2!, {r3, r4, r5, r6, r7} \n\t" \
@@ -1198,5 +1200,7 @@
     "stmia r0!, {r4,r8} \n\t"           \
     /* TODO pop {r1, r2} if supporting curves > 256 bits */ \
     "pop {r2} \n\t"
+
+#endif // SECURITY_MODULE_ENABLED
 
 #endif /* _UECC_ASM_ARM_MULT_SQUARE_H_ */

@@ -24,6 +24,7 @@
 
 #ifndef SENSOR_SENSOR_H_
 #define SENSOR_SENSOR_H_
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "flowsensor.h"
@@ -343,4 +344,5 @@ void SENSOR_Init(SENSOR_t *_config);
 void SENSOR_Task(void);
 uint8_t SENSOR_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* SENSOR_SENSOR_H_ */

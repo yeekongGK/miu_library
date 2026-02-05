@@ -7,6 +7,7 @@
 
 #ifndef NFC_ST25DV_NFCTAG_NDEF_H_
 #define NFC_ST25DV_NFCTAG_NDEF_H_
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 #include "st25dv_io.h"
@@ -18,4 +19,5 @@ NFCTAG_Status_t NFCTAG_NDEF_writeURI(void);
 void NFCTAG_NDEF_SetLock(uint16_t _seconds);
 bool NFCTAG_NDEF_IsLocked(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* NFC_ST25DV_NFCTAG_NDEF_H_ */

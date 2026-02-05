@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_LWM2M_LWRESOURCE_H_
 #define NBIOT_LWM2M_LWRESOURCE_H_
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 
 typedef enum
@@ -68,4 +69,5 @@ typedef struct
 }LWOBJ_Resource_t;
 
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_LWM2M_LWRESOURCE_H_ */

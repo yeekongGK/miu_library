@@ -23,6 +23,7 @@
 
 #ifndef METER_LOG_M95M01_H_
 #define METER_LOG_M95M01_H_
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 //#include "nbiot_define.h"
@@ -175,4 +176,5 @@ bool M95M01_GetM95M01AccessErrorFlag(void);
 void M95M01_ClearM95M01AccessErrorFlag(void);
 uint8_t M95M01_TransactionState(void);
 
+#endif // LOGGER_MODULE_ENABLED
 #endif /* METER_LOG_M95M01_H_ */

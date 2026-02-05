@@ -4,6 +4,9 @@
  *  Created on: 9 Mar 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "lwobject.h"
@@ -133,3 +136,5 @@ uint8_t LWOBJ_TaskState(void)
 {
 	return SLEEP_TaskState;
 }
+
+#endif // NETWORK_MODULE_ENABLED

@@ -20,6 +20,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if QUEUE_MODULE_ENABLED == ENABLE_MODULE
+
 #include "queue.h"
 
 void QUEUE_FIFO_Init(QUEUE_FIFO_t *_queue, uint8_t *_storage, uint16_t _elementSize, uint16_t _elementMax)
@@ -83,3 +86,5 @@ uint16_t QUEUE_FIFO_UnPop(QUEUE_FIFO_t *_queue, uint16_t _backcount)
 
 	return _backcount;
 }
+
+#endif // QUEUE_MODULE_ENABLED

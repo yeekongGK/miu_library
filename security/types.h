@@ -23,6 +23,7 @@
 
 #ifndef _UECC_TYPES_H_
 #define _UECC_TYPES_H_
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 #ifndef uECC_PLATFORM
     #if __AVR__
@@ -126,4 +127,5 @@ typedef unsigned __int128 uECC_dword_t;
 
 #endif /* uECC_WORD_SIZE */
 
+#endif // SECURITY_MODULE_ENABLED
 #endif /* _UECC_TYPES_H_ */

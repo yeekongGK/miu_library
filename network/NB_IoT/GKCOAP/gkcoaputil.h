@@ -8,5 +8,8 @@
 #include "main.h"
 #include "gkcoap.h"
 #include "logger.h"
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 void GKCOAPUTIL_DeviceToGKCoapLogs(uint8_t *_in, uint8_t *_out, uint16_t _count);
+
+#endif // NETWORK_MODULE_ENABLED

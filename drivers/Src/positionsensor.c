@@ -21,6 +21,9 @@
  *   - The calibration logic could be simplified for better clarity.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "positionsensor.h"
@@ -236,3 +239,5 @@ uint8_t POSSENSOR_TaskState(void)
 	}
 	return false;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

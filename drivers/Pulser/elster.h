@@ -20,6 +20,7 @@
 
 #ifndef PULSER_ELSTER_H_
 #define PULSER_ELSTER_H_
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 
@@ -38,4 +39,5 @@ uint32_t ELSTER_GetValue(void);
 void ELSTER_SetValue(int32_t _value);
 uint8_t ELSTER_GetDirection(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* PULSER_ELSTER_H_ */

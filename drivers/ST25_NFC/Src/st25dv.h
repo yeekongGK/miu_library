@@ -31,6 +31,7 @@
 /* Define to prevent recursive inclusion -------------------------------------*/
 #ifndef __ST25DV_H
 #define __ST25DV_H
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #ifdef __cplusplus
   extern "C" {
@@ -713,6 +714,7 @@ extern NFCTAG_Status_t ST25DV_IO_IsDeviceReady( const uint8_t DevAddr, const uin
 #ifdef __cplusplus
   }
 #endif
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* __ST25DV_H */
 
 /******************* (C) COPYRIGHT 2016 STMicroelectronics *****END OF FILE****/

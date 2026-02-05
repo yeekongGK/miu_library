@@ -23,6 +23,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if MESSAGE_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "msg.h"
 #include "logger.h"
@@ -194,3 +197,5 @@ uint8_t MSG_TaskState(void)
 	}
 	return false;
 }
+
+#endif // MESSAGE_MODULE_ENABLED

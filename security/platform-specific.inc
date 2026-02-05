@@ -3,6 +3,8 @@
 #ifndef _UECC_PLATFORM_SPECIFIC_H_
 #define _UECC_PLATFORM_SPECIFIC_H_
 
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 #include "types.h"
 
 #if (defined(_WIN32) || defined(_WIN64))
@@ -67,5 +69,7 @@ static int default_RNG(uint8_t *dest, unsigned size) {
 #define default_RNG_defined 1
 
 #endif /* platform */
+
+#endif // SECURITY_MODULE_ENABLED
 
 #endif /* _UECC_PLATFORM_SPECIFIC_H_ */

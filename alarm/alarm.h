@@ -21,6 +21,8 @@
 #ifndef ALARM_ALARM_H_
 #define ALARM_ALARM_H_
 
+#if ALARM_MODULE_ENABLED == ENABLE_MODULE
+
 #include "main.h"
 #include "sensor.h"
 
@@ -118,5 +120,7 @@ void ALARM_TLVRequest(TLV_t *_tlv);
 void ALARM_Init(ALARM_t *_config);
 void ALARM_Task(void);
 uint8_t ALARM_TaskState(void);
+
+#endif // ALARM_MODULE_ENABLED
 
 #endif /* ALARM_ALARM_H_ */

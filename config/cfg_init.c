@@ -20,6 +20,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if CONFIG_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "rtc.h"
 #include "wwdg.h"
@@ -545,3 +548,5 @@ Config_t config= {
 		.nbiot.lwm2m.notifyRetryBackoffMax_s= 900,
 		.nbiot.lwm2m.useCellTemperature= true,
 };
+
+#endif // CONFIG_MODULE_ENABLED

@@ -25,6 +25,8 @@
 
 #include "main.h"
 
+#if RTC_MODULE_ENABLED == ENABLE_MODULE
+
 typedef enum
 {
   SECOND_TickType= 0,
@@ -66,5 +68,7 @@ void RTC_DateTime_GetBCD(uint8_t *_date, uint8_t *_month, uint8_t  *_year, uint8
 uint64_t RTC_DateTime_GetBCDMask(void);
 void RTC_DateTime_Update(uint8_t _weekday, uint8_t _date, uint8_t _month, uint8_t  _year, uint8_t _hour, uint8_t _minute, uint8_t _second);/*BCD*/
 void RTC_DateTime_UpdateConfig(void);
+
+#endif // RTC_MODULE_ENABLED
 
 #endif /* INC_RTC_H_ */

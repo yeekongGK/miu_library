@@ -25,6 +25,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "cfg.h"
 #include "security.h"
@@ -276,3 +279,5 @@ ErrorStatus SECURE_ECDH_GenerateKeyPair(uint8_t *_publicKey64B)
 //	  return error_status;
 //}
 
+
+#endif // SECURITY_MODULE_ENABLED

@@ -4,6 +4,9 @@
  *  Created on: 30 Mar 2020
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include <BC66/bc66phy.h>
 #include "common.h"
@@ -620,3 +623,5 @@ uint8_t BC66PHY_TaskState(void)
 
 
 
+
+#endif // NETWORK_MODULE_ENABLED

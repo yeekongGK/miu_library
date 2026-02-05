@@ -7,6 +7,7 @@
 
 #ifndef NBIOT_BC66HANDLER_H_
 #define NBIOT_BC66HANDLER_H_
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "bc66link.h"
@@ -16,4 +17,5 @@ void BC66HANDLER_Reset(BC66LINK_t *_sBC66Link);
 bool BC66HANDLER_GetUnintentionalResetFlag(void);
 void BC66HANDLER_ClearUnintentionalResetFlag(void);
 
+#endif // NETWORK_MODULE_ENABLED
 #endif /* NBIOT_BC66HANDLER_H_ */

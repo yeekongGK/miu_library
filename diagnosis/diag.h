@@ -23,6 +23,8 @@
 #ifndef DIAG_H_
 #define DIAG_H_
 
+#if DIAGNOSIS_MODULE_ENABLED == ENABLE_MODULE
+
 #include "main.h"
 #include "sensor.h"
 #include "queue.h"
@@ -196,5 +198,7 @@ void DIAG_TLVRequest(TLV_t *_tlv);
 void DIAG_Init(DIAG_t *_config);
 void DIAG_Task(void);
 uint8_t DIAG_TaskState(void);
+
+#endif // DIAGNOSIS_MODULE_ENABLED
 
 #endif /* DIAG_H_ */

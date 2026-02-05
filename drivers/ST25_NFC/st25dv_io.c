@@ -4,6 +4,10 @@
  *  Created on: 20 May 2018
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
 #include <i2c.h>
 #include "st25dv.h"
 #include "st25dv_io.h"
@@ -103,3 +107,5 @@ NFCTAG_Status_t ST25DV_IO_IsDeviceReady( const uint8_t DevAddr, const uint32_t T
 {
   return  ST25DV_IO_ConvertHALStatus(I2C1_IsDeviceReady(DevAddr, Trials, ST25DV_I2C_TIMEOUT ));
 }
+
+#endif // DRIVERS_MODULE_ENABLED

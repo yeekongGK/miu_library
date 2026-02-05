@@ -32,6 +32,9 @@
  *   - List pending improvements, refactors, or unimplemented parts if any.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #if defined(STM32U031xx)
 
@@ -175,3 +178,5 @@ static void LPTIM1_CounterChangedToDownCallback(LPTIM_HandleTypeDef *hlptim)
 }
 
 #endif
+
+#endif // DRIVERS_MODULE_ENABLED

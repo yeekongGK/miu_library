@@ -20,6 +20,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "loggerutil.h"
 #include "rtc.h"
@@ -196,3 +199,5 @@ void LOGGERUTIL_Init(void)
 	RTCALARM_Init();
 	ucDevicePrevStatus= SENSORS_GetStatusCode();
 }
+
+#endif // LOGGER_MODULE_ENABLED

@@ -25,6 +25,7 @@
 #include "sls32aia010ms.h"
 #include "i2c.h"
 //#include "ioctrl.h"
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 static ErrorStatus SLS32AIA_Register_Write(uint8_t _reg, uint8_t *_pBuffer, uint16_t _size);
 static ErrorStatus SLS32AIA_Register_Read(uint8_t _reg, uint8_t *_pBuffer, uint16_t _size);
@@ -194,3 +195,5 @@ uint8_t SLS32AIA_TaskState(void)
 {
 	return false;
 }
+
+#endif // SECURITY_MODULE_ENABLED

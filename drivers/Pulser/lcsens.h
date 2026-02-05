@@ -23,6 +23,7 @@
 
 #ifndef PULSER_LCSENS_H_
 #define PULSER_LCSENS_H_
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 
@@ -142,4 +143,5 @@ void LCSENS_Init(LCSENS_t *_config);
 void LCSENS_Task(void);
 uint8_t LCSENS_TaskState(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* PULSER_LCCSENS_H_ */

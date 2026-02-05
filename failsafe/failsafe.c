@@ -24,6 +24,7 @@
 //#include "common.h"
 #include "failsafe.h"
 //#include "batterysensor.h"
+#if FAILSAFE_MODULE_ENABLED == ENABLE_MODULE
 
 static FAILSAFE_t *pConfig;
 uint32_t FAILSAFE_ulSWDGCounter= 0;
@@ -643,3 +644,5 @@ uint8_t FAILSAFE_TaskState(void)
 {
 	return SLEEP_TaskState;
 }
+
+#endif // FAILSAFE_MODULE_ENABLED

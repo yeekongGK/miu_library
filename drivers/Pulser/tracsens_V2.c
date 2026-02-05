@@ -19,12 +19,15 @@
  *
  ******************************************************************************/
 
-#include <stdio.h>       // For vsnprintf
-#include <string.h>      // For strlen
-#include <stdarg.h>      // For va_list
+#include "main.h"        // For HAL_UART_Transmit, huart2
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+//#include <stdio.h>       // For vsnprintf
+//#include <string.h>      // For strlen
+//#include <stdarg.h>      // For va_list
 #include <tracsens_u0_io.h> // Include the hardware abstraction
 #include <tracsens_V2.h>
-#include "main.h"        // For HAL_UART_Transmit, huart2
 
 /* ================================================================================= */
 /* PRIVATE MODULE VARIABLES                               */
@@ -185,3 +188,5 @@ static void TRACSENS_AutoReloadMatchCallback(void)
   UART_Printf("AutoReloadMatchCallback: Dir=%d, Multiplier=%ld, curr=%ld\r\n", eCounterDirection, lCntrMultiplier, current_value); // Optional: can be noisy
 
 }
+
+#endif // DRIVERS_MODULE_ENABLED

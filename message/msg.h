@@ -23,6 +23,7 @@
 
 #ifndef MSG_MSG_H_
 #define MSG_MSG_H_
+#if MESSAGE_MODULE_ENABLED == ENABLE_MODULE
 
 #include "main.h"
 #include "sys.h"
@@ -186,4 +187,5 @@ void MSG_Init(void);
 void MSG_Task(void);
 uint8_t MSG_TaskState(void);
 
+#endif // MESSAGE_MODULE_ENABLED
 #endif /* MSG_MSG_H_ */

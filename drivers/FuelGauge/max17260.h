@@ -21,6 +21,7 @@
  ******************************************************************************/
 #ifndef BATTERY_MONITOR_H
 #define BATTERY_MONITOR_H
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -147,4 +148,5 @@ uint16_t BatteryMonitor_GetQH(void);
 
 void MAX17260_Register_printout(void);
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif // BATTERY_MONITOR_H

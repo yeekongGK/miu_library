@@ -3,6 +3,8 @@
 #ifndef _UECC_CURVE_SPECIFIC_H_
 #define _UECC_CURVE_SPECIFIC_H_
 
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
+
 #define num_bytes_secp160r1 20
 #define num_bytes_secp192r1 24
 #define num_bytes_secp224r1 28
@@ -1244,5 +1246,7 @@ static void omega_mult_secp256k1(uint64_t * result, const uint64_t * right) {
 #endif /* (uECC_OPTIMIZATION_LEVEL > 0 &&  && !asm_mmod_fast_secp256k1) */
 
 #endif /* uECC_SUPPORTS_secp256k1 */
+
+#endif // SECURITY_MODULE_ENABLED
 
 #endif /* _UECC_CURVE_SPECIFIC_H_ */

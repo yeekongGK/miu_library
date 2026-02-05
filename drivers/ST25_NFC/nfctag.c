@@ -11,8 +11,11 @@
  *      * replace NFCTAG_GPOInit
  */
 
-//#include "common.h"
 #include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+//#include "common.h"
 #include "nfctag.h"
 #include "nfctag_ndef.h"
 #include "rtc.h"
@@ -595,3 +598,5 @@ uint8_t NFCTAG_TaskState(void)
 {
 	return false;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

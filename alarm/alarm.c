@@ -20,9 +20,13 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if ALARM_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "sys.h"
 #include "alarm.h"
+
 
 static ALARM_t *pConfig;
 static ALARM_AlarmObject_t *pAlarm;
@@ -267,3 +271,5 @@ uint8_t ALARM_TaskState(void)
 {
 	return eTaskState;
 }
+
+#endif // ALARM_MODULE_ENABLED

@@ -18,6 +18,10 @@
  *   - -
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "lptim1.h"
 
@@ -52,3 +56,5 @@ void LPTIM1_SetCounterChangedToDownCallback(void *_callback)
 {
 	LPTIM1_CounterChangedToDownCallback= _callback;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

@@ -22,6 +22,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if LOGGER_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "m95m01.h"
 #include "spi1.h"
@@ -778,3 +781,5 @@ uint8_t M95M01_TransactionState(void)
     return RUN_TaskState;
 }
 
+
+#endif // LOGGER_MODULE_ENABLED

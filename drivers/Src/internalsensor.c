@@ -19,6 +19,9 @@
  *     commented out and should be reviewed or removed.
  *
  ******************************************************************************/
+#include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "internalsensor.h"
@@ -114,3 +117,5 @@ uint8_t INTSENSOR_TaskState(void)
 {
 	return MCUADC_TaskState();
 }
+
+#endif // DRIVERS_MODULE_ENABLED

@@ -1,5 +1,5 @@
 /******************************************************************************
- * File:        cfg.c
+* File:        cfg.c
  * Author:      Firmware Team
  * Created:     05-10-2025
  * Last Update: 
@@ -21,6 +21,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if CONFIG_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "rtc.h"
 #include "wwdg.h"
@@ -1533,3 +1536,4 @@ ErrorStatus CFG_Load(Config_t *_cfg)
 
 	return _status;
 }
+#endif // CONFIG_MODULE_ENABLED

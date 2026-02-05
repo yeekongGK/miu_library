@@ -21,6 +21,9 @@
  ******************************************************************************/
 
 #include "main.h"
+
+#if DIAGNOSIS_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "sys.h"
 #include "diag.h"
@@ -128,3 +131,5 @@ uint8_t DIAG_TaskState(void)
 {
 	return SLEEP_TaskState;
 }
+
+#endif // DIAGNOSIS_MODULE_ENABLED

@@ -5,6 +5,10 @@
  *      Author: muhammad.ahmad@georgekent.net
  */
 
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
+
 #include "common.h"
 #include "lwm2m.h"
 #include "bc66link.h"
@@ -1161,3 +1165,5 @@ uint8_t LWM2M_TaskState(void)
 {
 	return (BC66LINK_TaskState()| LWOBJ_TaskState());
 }
+
+#endif // NETWORK_MODULE_ENABLED

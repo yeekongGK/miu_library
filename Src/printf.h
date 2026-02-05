@@ -23,6 +23,8 @@
 #ifndef _PRINTF_H_
 #define _PRINTF_H_
 
+#if PRINT_MODULE_ENABLED == ENABLE_MODULE
+
 #include <stdarg.h>
 #include <stddef.h>
 
@@ -104,5 +106,6 @@ int fctprintf(void (*out)(char character, void* arg), void* arg, const char* for
 }
 #endif
 
+#endif // PRINT_MODULE_ENABLED
 
 #endif  // _PRINTF_H_

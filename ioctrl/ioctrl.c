@@ -22,6 +22,9 @@
  *
  ******************************************************************************/
 #include "main.h"
+
+#if IOCTRL_MODULE_ENABLED == ENABLE_MODULE
+
 //#include "common.h"
 #include "sys.h"
 #include "cfg.h"
@@ -385,3 +388,5 @@ uint8_t IOCTRL_TaskState(void)
 
 
 
+
+#endif // IOCTRL_MODULE_ENABLED

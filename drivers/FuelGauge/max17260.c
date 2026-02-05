@@ -21,8 +21,11 @@
  *   - -
  *
  ******************************************************************************/
-#include "max17260.h"
 #include "main.h"
+
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
+
+#include "max17260.h"
 #include "i2c.h"
 
 // I2C Address for the MAX17260
@@ -407,3 +410,5 @@ uint16_t BatteryMonitor_GetQH(void) {
     MAX17260_Register_ReadSingle(QH, &qh_value);
     return qh_value;
 }
+
+#endif // DRIVERS_MODULE_ENABLED

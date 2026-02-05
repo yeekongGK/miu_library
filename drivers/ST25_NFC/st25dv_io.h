@@ -7,6 +7,7 @@
 
 #ifndef NFC_ST25DV_ST25DV_IO_H_
 #define NFC_ST25DV_ST25DV_IO_H_
+#if DRIVERS_MODULE_ENABLED == ENABLE_MODULE
 
 #include "stdbool.h"
 #include "st25dv.h"
@@ -25,4 +26,5 @@ NFCTAG_Status_t ST25DV_IO_IsDeviceReady( const uint8_t DevAddress, const uint32_
 
 extern ITStatus ST25DV_IO_GPOInterrupt;
 
+#endif // DRIVERS_MODULE_ENABLED
 #endif /* NFC_ST25DV_ST25DV_IO_H_ */

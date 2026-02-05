@@ -4,6 +4,9 @@
  *  Created on: 5 Feb 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "nbiot.h"
@@ -592,3 +595,5 @@ uint8_t NBIOT_TaskState(void)
 {
 	return (LWM2M_TaskState()| GKCOAP_TaskState());
 }
+
+#endif // NETWORK_MODULE_ENABLED

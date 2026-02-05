@@ -24,6 +24,7 @@
 
 #ifndef _UECC_H_
 #define _UECC_H_
+#if SECURITY_MODULE_ENABLED == ENABLE_MODULE
 
 #include <stdint.h>
 
@@ -384,4 +385,5 @@ int uECC_verify(const uint8_t *public_key,
 } /* end of extern "C" */
 #endif
 
+#endif // SECURITY_MODULE_ENABLED
 #endif /* _UECC_H_ */

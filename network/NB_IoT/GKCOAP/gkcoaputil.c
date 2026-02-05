@@ -4,6 +4,9 @@
  *  Created on: 18 Jun 2021
  *      Author: muhammad.ahmad@georgekent.net
  */
+#include "main.h"
+
+#if NETWORK_MODULE_ENABLED == ENABLE_MODULE
 
 #include "common.h"
 #include "gkcoaputil.h"
@@ -44,3 +47,5 @@ void GKCOAPUTIL_DeviceToGKCoapLogs(uint8_t *_in, uint8_t *_out, uint16_t _count)
 		memcpy(_out+ (i* sizeof(GKCOAP_Log_t)), &_coapLog, sizeof(GKCOAP_Log_t));
 	}
 }
+
+#endif // NETWORK_MODULE_ENABLED
