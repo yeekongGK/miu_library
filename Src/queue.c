@@ -1,9 +1,25 @@
-/*
- * queue.c
+/******************************************************************************
+ * File:        queue.c
+ * Author:      Firmware Team
+ * Created:     05-10-2025
+ * Last Update: 
  *
- *  Created on: 30 Aug 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements a generic FIFO (First-In, First-Out) queue data
+ *   structure. It provides functions to initialize a queue, push elements
+ *   onto it, and pop elements from it. It also includes an `UnPop`
+ *   functionality to revert a pop operation. The queue is implemented as a
+ *   circular buffer.
+ *
+ * Notes:
+ *   - The queue operates on a user-provided storage buffer.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
+
+#include "main.h"
 #include "queue.h"
 
 void QUEUE_FIFO_Init(QUEUE_FIFO_t *_queue, uint8_t *_storage, uint16_t _elementSize, uint16_t _elementMax)

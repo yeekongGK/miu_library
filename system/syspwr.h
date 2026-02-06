@@ -1,9 +1,22 @@
-/*
- * syspwr.h
+/******************************************************************************
+ * File:        syspwr.h
+ * Author:      Firmware Team
+ * Created:     05-10-2025
+ * Last Update: -
  *
- *  Created on: 5 Feb 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file defines the public interface for the system power management
+ *   module. It provides function prototypes for initializing GPIOs to a
+ *   low-power state, managing the initial power-up sequence, and controlling
+ *   the power supply to the modem.
+ *
+ * Notes:
+ *   - -
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
 #ifndef SYS_SYSPWR_H_
 #define SYS_SYSPWR_H_

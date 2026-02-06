@@ -1,10 +1,28 @@
-/*
- * msg.c
+/******************************************************************************
+ * File:        msg.c
+ * Author:      Firmware Team
+ * Created:     05-10-2025
+ * Last Update: 
  *
- *  Created on: 24 Jan 2021
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements a message queuing and processing system for the
+ *   application. It manages a FIFO queue of messages, where each message can
+ *   be targeted to a specific task. The core functionality is the `MSG_SyncTask`
+ *   function, which parses and processes Type-Length-Value (TLV) encoded
+ *   messages by dispatching them to the appropriate subsystem's TLV request
+ *   handler (e.g., System, Logger, NBIoT).
+ *
+ * Notes:
+ *   - The message queue has a fixed size defined by `MSG_CFG_MAX_MSG_ARRAY`.
+ *   - This module acts as a central dispatcher for inter-task communication
+ *     using a TLV protocol.
+ *
+ * To Do:
+ *   - -
+ *
+ ******************************************************************************/
 
+#include "main.h"
 //#include "common.h"
 #include "msg.h"
 #include "logger.h"

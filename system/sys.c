@@ -1,12 +1,28 @@
-/*
- * sys.c
+/******************************************************************************
+ * File:        sys.c
+ * Author:      Firmware Team
+ * Created:     05-10-2025
+ * Last Update: 
  *
- *  Created on: 18 Dec 2020
- *      Author: muhammad.ahmad@georgekent.net
- */
+ * Description:
+ *   This file implements the main system control functions, including task
+ *   scheduling, power management, and system reset handling. It provides a
+ *   centralized point for managing system-wide operations, such as entering
+ *   low-power modes, handling system requests (e.g., reboot, shutdown), and
+ *   dispatching TLV commands to various modules.
+ *
+ * Notes:
+ *   - The `SYS_Task` function orchestrates the main application loop, including
+ *     the sleep/wake cycle.
+ *
+ * To Do:
+ *   - The `SYS_GetTaskIdName` function is commented out and could be enabled
+ *     for better debugging.
+ *
+ ******************************************************************************/
 
-//#include "common.h"
 #include "main.h"
+//#include "common.h"
 #include "cfg.h"
 
 #include "sys.h"

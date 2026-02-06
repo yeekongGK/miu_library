@@ -1,197 +1,73 @@
-# MIU Library 
-
-```
-Projects Folder Structure
-├───.settings
-├───Core
-│   ├───Inc
-│   ├───Src
-│   └───Startup
-│
-├───Debug
-│   ├───Core
-│   │   ├───Src
-│   │   └───Startup
-│   └───Drivers
-│
-├───Drivers
-│   ├───CMSIS
-│   │   ├───Device
-│   │   └───Include
-│   └───STM32xxxx_HAL_Driver
-│       ├───Inc
-│       └───Src
-│
-├───miu_library
-│   ├─── ...
-│
-├─PRJECT.ioc
-├─PRJECT.pdf	// Project Report
-├─PRJECT.txt	// Project Report
-└─PRJECT_ToDoList.txt
-```
-
-```
-miu_library Folder Structure
-├───bootloaders
-├───config
-├───diagnosis
-├───documents
-├───drivers
-│   ├───BC660K
-│   ├───ENV
-│   ├───ESP32
-│   ├───ESP8266
-│   ├───FuelGauge
-│   │   └───Examples
-│   ├───GK_TRACSENS
-│   ├───M95M_EEPROM
-│   ├───MEMS
-│   │   └───LIS2DH12
-│   ├───Pulser
-│   ├───SIM7000E
-│   ├───Src
-│   ├───ST25_NFC
-│   │   └───Src
-│   └───UBlox_LEXI_R10801D
-├───examples
-├───failsafe
-├───logger
-├───network
-│   ├───COAP
-│   ├───GK_HES
-│   ├───GK_HES_Gateway
-│   ├───LWIP
-│   ├───LWM2M
-│   ├───NB_IoT
-│   │   ├───BC66
-│   │   ├───GKCOAP
-│   │   └───LWM2M
-│   │       ├───cbor
-│   │       │   └───src
-│   │       └───objects
-│   └───OpenStack
-├───projects
-│   ├───AURA
-│   ├───MICA
-│   └───TOPAZ
-├───protocols
-│   └───CBOR
-├───RTOS
-│   └───GKOS
-│       ├───ALARM
-│       ├───CFG
-│       ├───DBG
-│       ├───DIAG
-│       ├───LOGGER
-│       ├───MSG
-│       └───SYSTEM
-├───Scripts
-├───security
-├───Src
-├───storage
-├───system
-└───Tools
-```
-
-
-# 🔌 `miu_fw` (Meter Interface Unit Firmware Core)
-
-[](https://opensource.org/licenses/MIT)
-[](https://www.google.com/search?q=https://github.com/yourusername/miu_fw/releases)
-[](https://www.google.com/search?q=https://github.com/yourusername/miu_fw/stargazers)
+# MIU Firmware (Meter Interface Unit)
 
 ## 🎯 Overview
 
-This repository contains the **Portable, Hardware-Agnostic Core Logic** for the Meter Interface Unit (MIU). It is designed to be integrated as a **Git Submodule** into various STM32-based projects (e.g., F4, L4, H7 variants) to provide standardized meter reading, data processing, and communication services.
+This repository contains the complete firmware for a Meter Interface Unit (MIU). The firmware is designed for STM32-based hardware and provides a comprehensive set of services for meter reading, data processing, security, and communication. It is built to be robust, with failsafe mechanisms and advanced power management for battery-operated devices.
 
-The library ensures reusability by strictly separating the core business logic from the specific MCU's Hardware Abstraction Layer (HAL) using the **Platform Abstraction Layer (`port/`)**.
+## ✨ Key Features
 
------
+*   **NB-IoT Connectivity:** Supports network communication over NB-IoT with integrated LwM2M and custom CoAP protocol support.
+*   **Multi-Sensor Integration:** Interfaces with a wide range of sensors, including flow, position (accelerometer), temperature, and voltage sensors.
+*   **Advanced Power Management:** Implements low-power sleep modes (STOP0, STOP2) to conserve energy, managed by a task-based scheduler.
+*   **Persistent Data Logging:** Features a transactional logging system that saves device and event data to an external EEPROM.
+*   **Robust Failsafe Mechanisms:** Includes software and hardware watchdogs (IWDG, WWDG), brown-out reset (BOR) handling, and power voltage detection (PVD) to ensure system reliability.
+*   **Security:** Provides cryptographic services using AES and ECC for secure data handling and communication.
+*   **Modular Architecture:** Organized into distinct modules for alarms, configuration, diagnosis, drivers, and more, promoting maintainability.
+
+---
 
 ## 🗂️ Repository Structure
 
-The module follows a service-oriented structure:
+The firmware is organized into the following modules:
 
-| Folder | Description | Key Principle |
-| :--- | :--- | :--- |
-| **`port/`** | **Platform Abstraction Layer (The only MCU-dependent code).** Contains specific files (e.g., `stm32f4xx_port.c`) that implement the generic functions defined in `miu_port.h` using the target MCU's HAL. | **DO NOT** modify any other folder when porting to a new MCU. |
-| **`modules/`** | Contains low-level drivers and fundamental services (e.g., **Delay**, **Time Management**, **Watchdog** service). | Generic, reusable logic. |
-| **`network/`** | Implements standard communication protocols (e.g., **M-Bus/DLMS** stack, **TCP/IP** interface) used for data reporting. | Handles protocol encapsulation/decapsulation. |
-| **`security/`** | Services for cryptographic operations, secure storage, and hardware-based security features. | Ensures data integrity and authenticity. |
-| **`storage/`** | Services for managing non-volatile memory (e.g., **EEPROM Emulation**, **Flash Logging**, **Configuration Storage**). | Manages all persistent data. |
-| **`examples/`** | Simple demonstration files showing how to initialize and use the core services. | Quick reference for implementation. |
+| Folder | Description |
+| :--- | :--- |
+| `alarm/` | Manages alarm conditions, evaluating sensor data against thresholds. |
+| `config/` | Handles loading, saving, and applying device configurations from Flash memory. |
+| `diagnosis/` | Implements a diagnostic logging system to record system events and errors. |
+| `drivers/` | Contains low-level drivers for various hardware components like sensors, NFC tags, and fuel gauges. |
+| `failsafe/` | Provides failsafe mechanisms, including watchdogs and power monitoring, to ensure system stability. |
+| `ioctrl/` | Manages I/O control for power signals to peripherals like the radio and NFC chip. |
+| `logger/` | A transactional logging layer that manages persistent storage of device and event logs to EEPROM. |
+| `message/` | Implements a message queue and dispatcher for inter-task communication using a TLV protocol. |
+| `network/` | Handles network communication, including NB-IoT, LwM2M, and custom CoAP protocols. |
+| `security/` | Provides cryptographic services, including AES and ECC, for secure operations. |
+| `Src/` | Contains core application source files, utilities, and configuration for peripherals like RTC and printf. |
+| `system/` | Manages core system functions, including the main task scheduler, clock configuration, and power management. |
 
------
+---
 
-## ⚙️ Integration
+## ⚙️ Build Instructions
 
-### 1\. Adding the Submodule
+To build this project, it is recommended to use an IDE that supports STM32 development, such as **STM32CubeIDE**.
 
-From your main STM32 project directory, link this library as a submodule:
+1.  **Import Project:** Import the project into your STM32CubeIDE workspace.
+2.  **Configure Include Paths:** Ensure that the following top-level directories are added to the compiler's include paths:
+    *   `alarm`
+    *   `config`
+    *   `diagnosis`
+    *   `drivers`
+    *   `failsafe`
+    *   `ioctrl`
+    *   `logger`
+    *   `message`
+    *   `network`
+    *   `security`
+    *   `Src`
+    *   `system`
+3.  **Build Project:** Compile the project to generate the firmware binary.
 
-```bash
-git submodule add https://github.com/yourusername/miu_fw.git MIU_Library
-git submodule update --init --recursive
-```
-
-### 2\. Configuring the STM32CubeIDE Project
-
-To successfully compile the library:
-
-1.  **Add Include Paths:** In your project properties, add the following paths to the **GNU MCU C Compiler** → **Includes** settings:
-      * `MIU_Library/port`
-      * `MIU_Library/modules`
-      * `MIU_Library/network`
-      * *(...and all other top-level folders within `MIU_Library`)*
-2.  **Select Port File:** You **must** ensure the build system only compiles the single appropriate `*_port.c` file for your target MCU (e.g., only compile `stm32f4xx_port.c` and **exclude** all others).
-
-### 3\. Usage Example in `main.c`
-
-After configuration, you can include and initialize the library services:
-
-```c
-#include "miu_port.h"
-#include "miu_network_service.h"
-
-int main(void)
-{
-    HAL_Init(); // Standard HAL initialization
-
-    // Initialize the MIU platform abstraction
-    if (MIU_Port_Init() != MIU_OK) {
-        // Handle initialization error
-    }
-
-    // Start a specific MIU service
-    MIU_Network_Start("192.168.1.1", 8080);
-    
-    while (1)
-    {
-        // Application logic here
-    }
-}
-```
-
------
-
-## 🛠️ Porting to a New MCU
-
-The strict separation of the `port/` folder makes migration straightforward:
-
-1.  **Create a New Port File:** In the `port/` folder, duplicate an existing port file (e.g., `stm32f4xx_port.c`) and rename it for your new target (e.g., `stm32h7xx_port.c`).
-2.  **Implement Functions:** Update the functions within this new file to correctly use the **HAL functions specific to the new MCU family**.
-3.  **Update Build Configuration:** In your main STM32 project, ensure the build system compiles the **new** `stm32h7xx_port.c` and excludes all other port files.
+---
 
 ## 🤝 Contribution
 
-We welcome contributions\! Please follow the standard Git Flow:
+We welcome contributions! Please follow the standard Git Flow:
 
 1.  Fork the repository.
-2.  Create a feature branch (`git checkout -b feature/NewProtocol`).
-3.  Commit your changes following the **Conventional Commits** standard (`feat: add new protocol handler`).
+2.  Create a feature branch (`git checkout -b feature/NewFeature`).
+3.  Commit your changes following the **Conventional Commits** standard (`feat: add new feature`).
 4.  Open a Pull Request.
 
------
+---
 
-*Developed by [YK Chong/Geoge Kent] Version 1.00 | [2025]*
+*Developed by [YK Chong/George Kent] Version 1.00 | [2025]*
